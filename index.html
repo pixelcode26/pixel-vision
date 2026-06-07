@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Vision AI Agency — Premium AI Systems for Elite Businesses</title>
+  <meta name="description" content="We build AI systems that find your clients, write your emails, and grow your business — on autopilot. Premium AI agency for law firms, med spas, dental practices, and more." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Eye outer -->
+            <ellipse cx="24" cy="22" rx="18" ry="11" stroke="url(#eyeGrad)" stroke-width="2"/>
+            <!-- Iris -->
+            <circle cx="24" cy="22" r="6" fill="url(#irisGrad)" opacity="0.9"/>
+            <!-- Pupil -->
+            <circle cx="24" cy="22" r="2.5" fill="#000"/>
+            <!-- Highlight -->
+            <circle cx="26" cy="20" r="1" fill="white" opacity="0.8"/>
+            <!-- City skyline silhouette -->
+            <rect x="8" y="30" width="3" height="8" fill="url(#cityGrad)" rx="1"/>
+            <rect x="12" y="27" width="3" height="11" fill="url(#cityGrad)" rx="1"/>
+            <rect x="16" y="29" width="2" height="9" fill="url(#cityGrad)" rx="1"/>
+            <rect x="19" y="25" width="4" height="13" fill="url(#cityGrad)" rx="1"/>
+            <rect x="24" y="28" width="3" height="10" fill="url(#cityGrad)" rx="1"/>
+            <rect x="28" y="26" width="4" height="12" fill="url(#cityGrad)" rx="1"/>
+            <rect x="33" y="29" width="2" height="9" fill="url(#cityGrad)" rx="1"/>
+            <rect x="36" y="27" width="3" height="11" fill="url(#cityGrad)" rx="1"/>
+            <!-- Circuit base line -->
+            <line x1="4" y1="38" x2="44" y2="38" stroke="url(#circuitGrad)" stroke-width="1" stroke-dasharray="3,2"/>
+            <!-- Circuit dots -->
+            <circle cx="8" cy="38" r="1.5" fill="#C0C0C0"/>
+            <circle cx="16" cy="38" r="1.5" fill="#C0C0C0"/>
+            <circle cx="24" cy="38" r="1.5" fill="white"/>
+            <circle cx="32" cy="38" r="1.5" fill="#C0C0C0"/>
+            <circle cx="40" cy="38" r="1.5" fill="#C0C0C0"/>
+            <!-- Circuit traces -->
+            <line x1="8" y1="34" x2="8" y2="38" stroke="#666" stroke-width="1"/>
+            <line x1="16" y1="33" x2="16" y2="38" stroke="#666" stroke-width="1"/>
+            <line x1="32" y1="33" x2="32" y2="38" stroke="#666" stroke-width="1"/>
+            <line x1="40" y1="35" x2="40" y2="38" stroke="#666" stroke-width="1"/>
+            <defs>
+              <linearGradient id="eyeGrad" x1="6" y1="22" x2="42" y2="22" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#888"/>
+                <stop offset="0.5" stop-color="white"/>
+                <stop offset="1" stop-color="#888"/>
+              </linearGradient>
+              <radialGradient id="irisGrad" cx="24" cy="22" r="6" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#E0E0FF"/>
+                <stop offset="0.5" stop-color="#9090D0"/>
+                <stop offset="1" stop-color="#303060"/>
+              </radialGradient>
+              <linearGradient id="cityGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+                <stop stop-color="#aaa"/>
+                <stop offset="1" stop-color="#555"/>
+              </linearGradient>
+              <linearGradient id="circuitGrad" x1="4" y1="38" x2="44" y2="38" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#333"/>
+                <stop offset="0.5" stop-color="#888"/>
+                <stop offset="1" stop-color="#333"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Pixel Vision</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="who-we-serve.html" class="nav-link">Who We Serve</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="contact.html" class="btn btn-primary nav-cta">Book a Free Call</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up">
+          <span class="badge-dot"></span>
+          Premium AI Agency — Manhattan Standard
+        </div>
+        <h1 class="hero-headline animate-fade-up delay-1">
+          We Build AI Systems That Find Your Clients, Write Your Emails, and Grow Your Business —
+          <span class="gradient-text">On Autopilot.</span>
+        </h1>
+        <p class="hero-sub animate-fade-up delay-2">
+          Premium AI-powered websites and client acquisition systems for law firms, med spas, dental practices, real estate firms, and more.
+        </p>
+        <div class="hero-actions animate-fade-up delay-3">
+          <a href="contact.html" class="btn btn-primary btn-large">Book a Free Call</a>
+          <a href="services.html" class="btn btn-ghost btn-large">View Services</a>
+        </div>
+        <p class="hero-price animate-fade-up delay-4">
+          Starting at <strong>$10,000</strong> — Built for businesses that are serious about growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" data-target="58">0</span>
+          <span class="stat-label">Prospects Identified</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-label">Niches Served</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-suffix="+">20</span>
+          <span class="stat-label">Cities Nationwide</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number stat-text">24/7</span>
+          <span class="stat-label">AI Systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left">
+          <div class="section-label">About Pixel Vision</div>
+          <h2 class="section-title">Not Just a Website.<br/>A Complete AI Business System.</h2>
+        </div>
+        <div class="about-right">
+          <p class="about-text">
+            Pixel Vision is a full-service AI agency that helps white-collar businesses use artificial intelligence to find more clients, automate their outreach, and grow their revenue — without adding staff or spending more on ads.
+          </p>
+          <p class="about-text">
+            We don't just build websites. We build complete AI-powered business systems that work 24/7 so you don't have to.
+          </p>
+          <a href="services.html" class="btn btn-outline">Explore Our Systems</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES PREVIEW -->
+  <section class="services-preview section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What We Build</div>
+        <h2 class="section-title">Four AI Systems.<br/>One Unified Engine.</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="18" rx="3" stroke="white" stroke-width="1.5"/><path d="M10 14l4 4 8-6" stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="service-tag">Starting at $10,000</div>
+          <h3>Premium AI-Powered Website</h3>
+          <p>A high-end mobile-first website built with AI that converts visitors into clients automatically. Not a template. A premium digital presence.</p>
+          <a href="services.html" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="5" stroke="white" stroke-width="1.5"/><path d="M8 26c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round"/><path d="M24 14l3 3-3 3" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="service-tag">Starting at $15,000</div>
+          <h3>AI Client Acquisition Agent</h3>
+          <p>A custom AI agent that searches for your ideal clients, reaches out automatically, and books calls on your calendar while you sleep.</p>
+          <a href="services.html" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none"><rect x="5" y="8" width="22" height="16" rx="2" stroke="white" stroke-width="1.5"/><path d="M5 13l11 7 11-7" stroke="#C0C0C0" stroke-width="1.5"/></svg>
+          </div>
+          <div class="service-tag">Custom Pricing</div>
+          <h3>AI Email & Outreach Automation</h3>
+          <p>AI that writes personalized outreach emails to hundreds of prospects every week, follows up automatically, and never lets a lead go cold.</p>
+          <a href="services.html" class="service-link">Learn more →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M6 24V12l10-6 10 6v12l-10 6-10-6z" stroke="white" stroke-width="1.5"/><circle cx="16" cy="16" r="3" stroke="#C0C0C0" stroke-width="1.5"/></svg>
+          </div>
+          <div class="service-tag">From $3,000/mo</div>
+          <h3>Monthly AI Management</h3>
+          <p>We monitor, optimize, and improve your AI systems every month with reporting showing exactly how many leads your system generated.</p>
+          <a href="services.html" class="service-link">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">The Process</div>
+        <h2 class="section-title">From Zero to<br/>AI-Powered in 4 Steps.</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Discovery Call</h3>
+          <p>We learn about your business, your goals, and your ideal client. Free, 20 minutes, no pressure.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Custom AI System Design</h3>
+          <p>We design a complete AI system specifically built for your business and industry.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Build & Launch</h3>
+          <p>We build everything — website, AI agents, and automation flows — and launch your system in 2–4 weeks.</p>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>Monthly Optimization</h3>
+          <p>We monitor results, optimize performance, and continuously improve your system every month.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NICHES PREVIEW -->
+  <section class="niches section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Who We Serve</div>
+        <h2 class="section-title">Built for White-Collar<br/>Businesses That Mean Business.</h2>
+      </div>
+      <div class="niches-grid">
+        <a href="who-we-serve.html" class="niche-card">
+          <div class="niche-icon">⚖️</div>
+          <h3>Law Firms</h3>
+          <p>Compete with firms 10x your size using AI client acquisition.</p>
+        </a>
+        <a href="who-we-serve.html" class="niche-card">
+          <div class="niche-icon">✨</div>
+          <h3>Med Spas & Clinics</h3>
+          <p>Fill your calendar with new patients automatically.</p>
+        </a>
+        <a href="who-we-serve.html" class="niche-card">
+          <div class="niche-icon">🦷</div>
+          <h3>Dental Practices</h3>
+          <p>New patient acquisition and appointment booking on autopilot.</p>
+        </a>
+        <a href="who-we-serve.html" class="niche-card">
+          <div class="niche-icon">🏢</div>
+          <h3>Real Estate</h3>
+          <p>AI that finds buyers, sellers, and tenants automatically.</p>
+        </a>
+        <a href="who-we-serve.html" class="niche-card">
+          <div class="niche-icon">📊</div>
+          <h3>CPA & Financial</h3>
+          <p>Build credibility and client pipeline simultaneously.</p>
+        </a>
+        <a href="who-we-serve.html" class="niche-card">
+          <div class="niche-icon">🏗️</div>
+          <h3>Commercial Real Estate</h3>
+          <p>Find property owners, investors, and tenants automatically.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <div class="section-label">Get Started</div>
+        <h2>One New Client Pays for<br/>the Entire System.</h2>
+        <p>Every client after that is pure profit. Book a free 20-minute call and see exactly what Pixel Vision can build for your business.</p>
+        <a href="contact.html" class="btn btn-primary btn-large">Book a Free Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon logo-icon-sm">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="24" cy="22" rx="18" ry="11" stroke="url(#eyeGrad2)" stroke-width="2"/>
+                <circle cx="24" cy="22" r="6" fill="url(#irisGrad2)" opacity="0.9"/>
+                <circle cx="24" cy="22" r="2.5" fill="#000"/>
+                <circle cx="26" cy="20" r="1" fill="white" opacity="0.8"/>
+                <rect x="8" y="30" width="3" height="8" fill="#777" rx="1"/>
+                <rect x="12" y="27" width="3" height="11" fill="#777" rx="1"/>
+                <rect x="16" y="29" width="2" height="9" fill="#777" rx="1"/>
+                <rect x="19" y="25" width="4" height="13" fill="#777" rx="1"/>
+                <rect x="24" y="28" width="3" height="10" fill="#777" rx="1"/>
+                <rect x="28" y="26" width="4" height="12" fill="#777" rx="1"/>
+                <rect x="33" y="29" width="2" height="9" fill="#777" rx="1"/>
+                <rect x="36" y="27" width="3" height="11" fill="#777" rx="1"/>
+                <line x1="4" y1="38" x2="44" y2="38" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
+                <circle cx="8" cy="38" r="1.5" fill="#666"/>
+                <circle cx="16" cy="38" r="1.5" fill="#666"/>
+                <circle cx="24" cy="38" r="1.5" fill="#888"/>
+                <circle cx="32" cy="38" r="1.5" fill="#666"/>
+                <circle cx="40" cy="38" r="1.5" fill="#666"/>
+                <defs>
+                  <linearGradient id="eyeGrad2" x1="6" y1="22" x2="42" y2="22" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#555"/><stop offset="0.5" stop-color="#aaa"/><stop offset="1" stop-color="#555"/>
+                  </linearGradient>
+                  <radialGradient id="irisGrad2" cx="24" cy="22" r="6" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#C0C0E0"/><stop offset="0.5" stop-color="#7070A0"/><stop offset="1" stop-color="#202040"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">Pixel Vision</span>
+          </a>
+          <p class="footer-tagline">We build AI systems that find your clients, write your emails, and grow your business — on autopilot.</p>
+          <a href="mailto:pixelvision2026@gmail.com" class="footer-email">pixelvision2026@gmail.com</a>
+        </div>
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="who-we-serve.html">Who We Serve</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">AI-Powered Website</a></li>
+            <li><a href="services.html">Client Acquisition Agent</a></li>
+            <li><a href="services.html">Email Automation</a></li>
+            <li><a href="services.html">Monthly Management</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pixel Vision AI Agency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
