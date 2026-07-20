@@ -268,3 +268,42 @@ p { color: var(--gray-400); line-height: 1.75; }
 .form-group label { font-size: 0.825rem; font-weight: 600; color: var(--silver); letter-spacing: 0.02em; }
 .form-group input, .form-group select, .form-group textarea { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: 0.95rem; font-family: var(--font-main); color: var(--white); transition: var(--transition); outline: none; resize: none; }
 .form-group input
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  /* Shrink hero headline */
+  h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Hide nav links on mobile */
+  nav ul {
+    display: none !important;
+  }
+
+  /* Make buttons side by side */
+  .hero-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
+  }
+
+  .hero-buttons a {
+    flex: 1 !important;
+    text-align: center !important;
+    padding: 12px 10px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Add padding so nothing touches edges */
+  section, .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Fix badge/pill at top */
+  .badge, .pill, .tag {
+    font-size: 0.7rem !important;
+    white-space: normal !important;
+  }
+}
