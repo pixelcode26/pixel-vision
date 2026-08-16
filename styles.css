@@ -12,6 +12,9 @@
   --gray-500: #666666;
   --gray-600: #444444;
   --accent-glow: rgba(192,192,192,0.10);
+  --emerald: #00C896;
+  --emerald-dim: #00a87e;
+  --emerald-glow: rgba(0,200,150,0.25);
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Space Grotesk', -apple-system, sans-serif;
   --radius: 12px;
@@ -267,43 +270,189 @@ p { color: var(--gray-400); line-height: 1.75; }
 .form-group { display: flex; flex-direction: column; gap: 8px; }
 .form-group label { font-size: 0.825rem; font-weight: 600; color: var(--silver); letter-spacing: 0.02em; }
 .form-group input, .form-group select, .form-group textarea { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: 0.95rem; font-family: var(--font-main); color: var(--white); transition: var(--transition); outline: none; resize: none; }
-.form-group input
+
 /* MOBILE FIXES */
 @media (max-width: 768px) {
-  /* Shrink hero headline */
   h1 {
     font-size: 2.2rem !important;
     line-height: 1.2 !important;
   }
-
-  /* Hide nav links on mobile */
   nav ul {
     display: none !important;
   }
-
-  /* Make buttons side by side */
   .hero-buttons {
     display: flex !important;
     flex-direction: row !important;
     gap: 10px !important;
   }
-
   .hero-buttons a {
     flex: 1 !important;
     text-align: center !important;
     padding: 12px 10px !important;
     font-size: 0.85rem !important;
   }
-
-  /* Add padding so nothing touches edges */
   section, .container {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
-
-  /* Fix badge/pill at top */
   .badge, .pill, .tag {
     font-size: 0.7rem !important;
     white-space: normal !important;
+  }
+}
+
+/* ================================================
+   EMERALD ACCENT — Book a Free Call buttons
+   ================================================ */
+.btn-emerald {
+  background: var(--emerald) !important;
+  color: #000 !important;
+  border-color: var(--emerald) !important;
+  box-shadow: 0 0 0 0 var(--emerald-glow);
+  transition: box-shadow var(--transition), background var(--transition), transform var(--transition);
+}
+.btn-emerald:hover {
+  background: var(--emerald-dim) !important;
+  box-shadow: 0 0 22px 6px var(--emerald-glow);
+  transform: translateY(-2px);
+}
+
+/* Section title emerald underline */
+.section-title {
+  position: relative;
+  padding-bottom: 22px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 2px;
+  background: var(--emerald);
+  border-radius: 2px;
+}
+.section-title.left-title::after {
+  left: 0;
+  transform: none;
+}
+
+/* Badge dot — emerald */
+.badge-dot {
+  background: var(--emerald) !important;
+  animation: emerald-pulse 2s infinite !important;
+}
+@keyframes emerald-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,200,150,0.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(0,200,150,0); }
+}
+
+/* Nav scrolled — glass with emerald tint */
+.nav.scrolled {
+  background: rgba(0,0,0,0.92) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(0,200,150,0.15) !important;
+}
+
+/* Hamburger open → X */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Niche SVG icon sizing */
+.niche-icon svg,
+.niche-detail-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* ================================================
+   AOS SCROLL ANIMATIONS
+   ================================================ */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-aos-delay="100"] { transition-delay: 100ms; }
+[data-aos-delay="200"] { transition-delay: 200ms; }
+[data-aos-delay="300"] { transition-delay: 300ms; }
+[data-aos-delay="400"] { transition-delay: 400ms; }
+[data-aos-delay="500"] { transition-delay: 500ms; }
+
+/* .animate-fade-up (legacy pattern) */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate-fade-up.delay-1 { transition-delay: 120ms; }
+.animate-fade-up.delay-2 { transition-delay: 240ms; }
+.animate-fade-up.delay-3 { transition-delay: 360ms; }
+
+/* ================================================
+   TYPEWRITER CURSOR
+   ================================================ */
+.tw-cursor {
+  display: inline-block;
+  color: var(--emerald);
+  animation: tw-blink 0.9s step-end infinite;
+  margin-left: 2px;
+  font-weight: 300;
+}
+@keyframes tw-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ================================================
+   MOBILE IMPROVEMENTS (≤ 480px)
+   ================================================ */
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.85rem !important;
+    line-height: 1.2 !important;
+  }
+  .page-title {
+    font-size: 1.75rem !important;
+  }
+  h2 {
+    font-size: 1.6rem !important;
+  }
+  .section {
+    padding: 64px 0 !important;
+  }
+  .container {
+    padding: 0 18px !important;
+  }
+  .hero-section {
+    padding-top: 100px !important;
+    padding-bottom: 64px !important;
   }
 }
