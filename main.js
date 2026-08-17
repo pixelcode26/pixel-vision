@@ -55,35 +55,20 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.animate-fade-up').forEach(el => fadeObserver.observe(el));
 }
 
-// TYPEWRITER: hero headline (index.html only)
-(function typewriter() {
-  const textEl   = document.getElementById('tw-text');
-  const suffixEl = document.getElementById('tw-suffix');
-  const cursorEl = document.getElementById('tw-cursor');
-  if (!textEl) return;
-
-  const part1 = 'We Build AI Systems That Find Your Clients, Write Your Emails, and Grow Your Business — ';
-  const part2 = 'On Autopilot.';
+// ROTATING WORD: cycles industries in hero (index.html only)
+(function rotatingWords() {
+  const el = document.getElementById('rotatingWord');
+  if (!el) return;
+  const words = ['Law Firms', 'Med Spas', 'Dental Practices', 'Real Estate Firms'];
   let i = 0;
-
-  function type1() {
-    if (i < part1.length) {
-      textEl.textContent += part1[i++];
-      setTimeout(type1, 20);
-    } else {
-      let j = 0;
-      function type2() {
-        if (j < part2.length) {
-          suffixEl.textContent += part2[j++];
-          setTimeout(type2, 20);
-        } else {
-          setTimeout(() => { if (cursorEl) cursorEl.style.display = 'none'; }, 1500);
-        }
-      }
-      type2();
-    }
-  }
-  setTimeout(type1, 400);
+  setInterval(() => {
+    el.classList.add('rotating-out');
+    setTimeout(() => {
+      i = (i + 1) % words.length;
+      el.textContent = words[i];
+      el.classList.remove('rotating-out');
+    }, 350);
+  }, 2800);
 })();
 
 // SMOOTH SCROLL for in-page anchors
@@ -92,4 +77,5 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(a.getAttribute('href'));
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
+});
 });
