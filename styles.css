@@ -124,7 +124,7 @@ p { color: var(--gray-400); line-height: 1.75; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); border: 1px solid var(--border); background: rgba(255,255,255,0.03); padding: 8px 16px; border-radius: 100px; margin-bottom: 32px; }
 .badge-dot { width: 6px; height: 6px; background: var(--silver); border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-.hero-headline { font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 28px; }
+.hero-headline { font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px; }
 .hero-sub { font-size: clamp(1rem, 1.8vw, 1.2rem); color: var(--gray-400); max-width: 640px; margin-bottom: 40px; line-height: 1.7; }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 28px; }
 .hero-price { font-size: 0.9rem; color: var(--gray-500); }
@@ -333,6 +333,7 @@ p { color: var(--gray-400); line-height: 1.75; }
   background: var(--emerald);
   border-radius: 2px;
 }
+/* Left-aligned titles (not inside .section-header) */
 .section-title.left-title::after {
   left: 0;
   transform: none;
@@ -417,18 +418,23 @@ p { color: var(--gray-400); line-height: 1.75; }
 .animate-fade-up.delay-3 { transition-delay: 360ms; }
 
 /* ================================================
-   TYPEWRITER CURSOR
+   ROTATING WORD — hero industry cycle
    ================================================ */
-.tw-cursor {
-  display: inline-block;
-  color: var(--emerald);
-  animation: tw-blink 0.9s step-end infinite;
-  margin-left: 2px;
-  font-weight: 300;
+.hero-rotating {
+  font-size: 1rem;
+  color: var(--gray-500);
+  margin-bottom: 28px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 }
-@keyframes tw-blink {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0; }
+.rotating-word {
+  color: var(--emerald);
+  font-weight: 700;
+  display: inline-block;
+  transition: opacity 0.35s ease;
+}
+.rotating-word.rotating-out {
+  opacity: 0;
 }
 
 /* ================================================
