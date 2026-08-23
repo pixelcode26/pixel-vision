@@ -55,20 +55,39 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.animate-fade-up').forEach(el => fadeObserver.observe(el));
 }
 
-// ROTATING WORD: cycles industries in hero (index.html only)
-(function rotatingWords() {
+// TYPEWRITER: rotating industry word in hero (index.html only)
+(function rotatingTypewriter() {
   const el = document.getElementById('rotatingWord');
   if (!el) return;
-  const words = ['Law Firms', 'Med Spas', 'Dental Practices', 'Real Estate Firms'];
-  let i = 0;
-  setInterval(() => {
-    el.classList.add('rotating-out');
+  const words = ['Law Firms', 'Med Spas', 'Dental Practices', 'Real Estate Firms', 'CPA Firms'];
+  let wordIndex = 0;
+
+  function erase(cb) {
+    const txt = el.textContent;
+    if (!txt.length) { cb(); return; }
+    el.textContent = txt.slice(0, -1);
+    setTimeout(() => erase(cb), 55);
+  }
+
+  function type(word, cb) {
+    let i = 0;
+    (function step() {
+      if (i < word.length) { el.textContent += word[i++]; setTimeout(step, 85); }
+      else cb();
+    })();
+  }
+
+  function cycle() {
     setTimeout(() => {
-      i = (i + 1) % words.length;
-      el.textContent = words[i];
-      el.classList.remove('rotating-out');
-    }, 350);
-  }, 2800);
+      erase(() => {
+        wordIndex = (wordIndex + 1) % words.length;
+        type(words[wordIndex], cycle);
+      });
+    }, 2400);
+  }
+
+  // First word already visible in HTML; start cycling after a pause
+  setTimeout(cycle, 2000);
 })();
 
 // SMOOTH SCROLL for in-page anchors
