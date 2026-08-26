@@ -117,7 +117,7 @@ p  { color: var(--gray-400); line-height: 1.8; }
 }
 .btn-emerald:hover {
   background: var(--emerald-dim) !important;
-  box-shadow: 0 0 32px 10px var(--emerald-glow);
+  box-shadow: 0 0 40px 12px var(--emerald-glow);
   transform: translateY(-3px) !important;
 }
 
@@ -343,7 +343,7 @@ p  { color: var(--gray-400); line-height: 1.8; }
 .step-card  { flex: 1; min-width: 200px; padding: 36px 28px; }
 
 /* ── EMERALD ACCENT: Step numbers ────────────────── */
-.step-num   {
+.step-num {
   font-family: var(--font-display); font-size: 3.5rem; font-weight: 800;
   color: var(--emerald);
   line-height: 1; margin-bottom: 24px; letter-spacing: -0.04em;
@@ -382,23 +382,42 @@ p  { color: var(--gray-400); line-height: 1.8; }
 .niche-card h3 { font-size: 1.05rem; margin-bottom: 10px; }
 .niche-card p  { font-size: 0.875rem; color: var(--gray-400); line-height: 1.65; }
 
-/* ── CTA BOX ─────────────────────────────────────── */
-.cta-section { background: var(--bg-secondary); }
+/* ── FINAL CTA SECTION ───────────────────────────── */
+.cta-section {
+  background: var(--bg-secondary);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  position: relative;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--emerald), transparent);
+}
 .cta-box {
   position: relative; text-align: center;
-  background: #0a0a0a;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg); padding: 96px 56px; overflow: hidden;
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 0%, rgba(0,200,150,0.10) 0%, transparent 60%),
+    #0a0a0a;
+  border: 1px solid rgba(0,200,150,0.18);
+  border-radius: var(--radius-lg); padding: 112px 56px; overflow: hidden;
 }
 .cta-glow {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-  width: 700px; height: 400px;
-  background: radial-gradient(ellipse, rgba(255,255,255,0.03) 0%, transparent 65%);
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 500px;
+  background: radial-gradient(ellipse at top, rgba(0,200,150,0.13) 0%, transparent 65%);
   pointer-events: none;
+  animation: glow-pulse 7s ease-in-out infinite alternate;
 }
 .cta-box .section-label { display: block; margin-bottom: 20px; }
-.cta-box h2 { margin-bottom: 20px; font-size: clamp(2rem, 3.8vw, 3rem); }
-.cta-box p  { color: var(--gray-400); max-width: 520px; margin: 0 auto 40px; font-size: 1.1rem; }
+.cta-box h2 {
+  margin-bottom: 20px;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.cta-box p  { color: var(--gray-400); max-width: 520px; margin: 0 auto 48px; font-size: 1.1rem; }
 
 /* ── PAGE HERO (inner pages) ─────────────────────── */
 .page-hero { padding: 168px 0 96px; position: relative; overflow: hidden; }
@@ -530,18 +549,59 @@ p  { color: var(--gray-400); line-height: 1.8; }
 .form-success h3 { margin-bottom: 10px; }
 
 /* ── FOOTER ──────────────────────────────────────── */
-.footer { border-top: 1px solid var(--border); padding: 72px 0 40px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 64px; margin-bottom: 56px; }
-.footer-tagline { font-size: 0.9rem; color: var(--gray-500); margin: 18px 0 24px; max-width: 300px; line-height: 1.7; }
-.footer-contact-info { display: flex; flex-direction: column; gap: 10px; }
-.footer-contact-info a { font-size: 0.875rem; color: var(--gray-500); display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+.footer {
+  position: relative;
+  padding: 96px 0 52px;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--emerald) 50%, transparent 100%);
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 64px; margin-bottom: 72px;
+}
+.footer-brand .logo { margin-bottom: 20px; }
+.footer-brand .logo-icon-sm { width: 44px; height: 44px; }
+.footer-brand .logo-text { font-size: 1.3rem; }
+.footer-tagline { font-size: 0.9rem; color: var(--gray-500); margin-bottom: 28px; max-width: 300px; line-height: 1.7; }
+.footer-contact-info { display: flex; flex-direction: column; gap: 12px; }
+.footer-contact-info a { font-size: 0.875rem; color: var(--gray-500); display: flex; align-items: center; gap: 10px; transition: color 0.2s; }
 .footer-contact-info a:hover { color: var(--white); }
-.fci-icon { width: 18px; text-align: center; }
-.footer-nav h4, .footer-services h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-600); margin-bottom: 20px; }
-.footer-nav ul, .footer-services ul { display: flex; flex-direction: column; gap: 12px; }
+
+/* ── EMERALD ACCENT: Footer contact icons ─────────── */
+.fci-icon { width: 18px; text-align: center; color: var(--emerald); flex-shrink: 0; }
+
+/* ── EMERALD ACCENT: Footer section headers ───────── */
+.footer-nav h4, .footer-services h4 {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--emerald);
+  margin-bottom: 22px;
+}
+.footer-nav ul, .footer-services ul { display: flex; flex-direction: column; gap: 13px; }
 .footer-nav a, .footer-services a { font-size: 0.9rem; color: var(--gray-500); transition: color 0.2s; }
 .footer-nav a:hover, .footer-services a:hover { color: var(--white); }
-.footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; text-align: center; }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.footer-brand-line {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
 .footer-bottom p { font-size: 0.85rem; color: var(--gray-600); }
 
 /* ── SECTION TITLE UNDERLINE ─────────────────────── */
@@ -636,9 +696,10 @@ p  { color: var(--gray-400); line-height: 1.8; }
   .hero           { padding: 120px 0 72px; }
   .stat-item      { padding: 16px 28px; }
   .step-connector { display: none; }
-  .cta-box        { padding: 60px 28px; }
+  .cta-box        { padding: 72px 28px; }
   .hero-actions   { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+  .footer         { padding: 72px 0 40px; }
 }
 
 @media (max-width: 480px) {
