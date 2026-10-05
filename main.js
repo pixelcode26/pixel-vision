@@ -53,40 +53,6 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.animate-fade-up').forEach(el => fadeObserver.observe(el));
 }
 
-// ── TYPEWRITER: rotating industry word ───────────
-(function rotatingTypewriter() {
-  const el = document.getElementById('rotatingWord');
-  if (!el) return;
-  const words = ['Law Firms', 'Med Spas', 'Dental Practices', 'Real Estate Firms', 'CPA Firms'];
-  let wordIndex = 0;
-
-  function erase(cb) {
-    const txt = el.textContent;
-    if (!txt.length) { cb(); return; }
-    el.textContent = txt.slice(0, -1);
-    setTimeout(() => erase(cb), 50);
-  }
-
-  function type(word, cb) {
-    let i = 0;
-    (function step() {
-      if (i < word.length) { el.textContent += word[i++]; setTimeout(step, 80); }
-      else cb();
-    })();
-  }
-
-  function cycle() {
-    setTimeout(() => {
-      erase(() => {
-        wordIndex = (wordIndex + 1) % words.length;
-        type(words[wordIndex], cycle);
-      });
-    }, 2400);
-  }
-
-  setTimeout(cycle, 2000);
-})();
-
 // ── SMOOTH SCROLL ────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
