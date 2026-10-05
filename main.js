@@ -1,5 +1,5 @@
 /* ================================================
-   PIXEL VISION — MAIN JS  (Premium Upgrade)
+   PIXEL VISION — MAIN JS
    ================================================ */
 
 // ── NAV: glass blur on scroll ────────────────────
@@ -53,6 +53,39 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.animate-fade-up').forEach(el => fadeObserver.observe(el));
 }
 
+// ── ROTATING INDUSTRY WORD ───────────────────────
+(function rotatingIndustry() {
+  const el = document.getElementById('rotatingIndustry');
+  if (!el) return;
+  const words = ['Commercial Real Estate', 'Law Firms', 'Med Spas & Clinics', 'Dental Practices', 'CPA Firms', 'Real Estate Brokers'];
+  let idx = 0;
+
+  function erase(cb) {
+    const current = el.textContent;
+    if (!current.length) { cb(); return; }
+    el.textContent = current.slice(0, -1);
+    setTimeout(() => erase(cb), 40);
+  }
+  function type(word, cb) {
+    let i = 0;
+    function tick() {
+      el.textContent = word.slice(0, ++i);
+      if (i < word.length) setTimeout(tick, 70);
+      else cb();
+    }
+    tick();
+  }
+  function cycle() {
+    setTimeout(() => {
+      erase(() => {
+        idx = (idx + 1) % words.length;
+        setTimeout(() => type(words[idx], cycle), 300);
+      });
+    }, 2600);
+  }
+  type(words[0], cycle);
+})();
+
 // ── SMOOTH SCROLL ────────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
@@ -95,9 +128,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       const numberEl = entry.target.querySelector('.stat-number');
       if (!numberEl) return;
       const parsed = parseStatNumber(numberEl);
-      if (parsed) {
-        animateNumber(numberEl, 0, parsed.num, parsed.suffix, parsed.prefix, 1600);
-      }
+      if (parsed) animateNumber(numberEl, 0, parsed.num, parsed.suffix, parsed.prefix, 1600);
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.5 });
