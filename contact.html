@@ -73,8 +73,13 @@
 
   <section class="page-hero">
     <div class="hero-bg">
+      <div class="hero-gradient-orb"></div>
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
       <div class="grid-overlay"></div>
+      <div class="hero-noise"></div>
       <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
     </div>
     <div class="container">
       <div class="page-hero-content">
@@ -122,7 +127,7 @@
               </div>
               <div class="form-group">
                 <label for="business">Business Name *</label>
-                <input type="text" id="business" name="business" placeholder="Smith & Associates LLC" required />
+                <input type="text" id="business" name="business" placeholder="Smith &amp; Associates LLC" required />
               </div>
             </div>
             <div class="form-row">
@@ -272,5 +277,25 @@
   </footer>
 
   <script src="main.js"></script>
+  <script>
+  (function(){
+    const canvas=document.getElementById('heroCanvas');
+    if(!canvas)return;
+    const ctx=canvas.getContext('2d');
+    const EM=[0,200,150],SV=[180,180,200];
+    const N=90,MD=150,SP=0.35;
+    let W,H,pts;
+    function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
+    function init(){pts=Array.from({length:N},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*SP*2,vy:(Math.random()-.5)*SP*2,r:Math.random()*1.4+1,em:Math.random()<.28}));}
+    function frame(){
+      ctx.clearRect(0,0,W,H);
+      for(let i=0;i<pts.length;i++){for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j];const dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d>MD)continue;const al=(1-d/MD)*0.32;const[r,g,bl]=(a.em||b.em)?EM:SV;ctx.beginPath();ctx.strokeStyle=`rgba(${r},${g},${bl},${al})`;ctx.lineWidth=0.75;ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}}
+      for(const p of pts){const[r,g,b]=p.em?EM:SV;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(${r},${g},${b},${p.em?.9:.45})`;ctx.fill();if(p.em){ctx.beginPath();ctx.arc(p.x,p.y,p.r*3.5,0,Math.PI*2);ctx.fillStyle=`rgba(${r},${g},${b},.06)`;ctx.fill();}p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;}
+      requestAnimationFrame(frame);
+    }
+    window.addEventListener('resize',()=>{resize();init();});
+    resize();init();frame();
+  })();
+  </script>
 </body>
 </html>
