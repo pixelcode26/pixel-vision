@@ -400,7 +400,8 @@
       requestAnimationFrame(frame);
     }
     window.addEventListener('resize',()=>{resize();init();});
-    resize();init();frame();
+    if(document.readyState==='complete'){resize();init();frame();}
+    else window.addEventListener('load',()=>{resize();init();frame();});
   })();
   </script>
 </body>
