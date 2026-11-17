@@ -97,10 +97,12 @@
   <section class="hero">
     <div class="hero-bg">
       <div class="hero-gradient-orb"></div>
-      <div class="hero-particles"></div>
+      <canvas class="hero-canvas" id="heroCanvas"></canvas>
       <div class="grid-overlay"></div>
+      <div class="hero-noise"></div>
       <div class="glow glow-1"></div>
       <div class="glow glow-2"></div>
+      <div class="glow glow-3"></div>
     </div>
     <div class="container">
       <div class="hero-content">
@@ -137,7 +139,7 @@
           <a href="services.html" class="btn btn-ghost btn-large">View Services</a>
         </div>
         <p class="hero-price animate-fade-up delay-3">
-          Starting at <strong>$10,000</strong> — Built for businesses that are serious about growth.
+          Custom pricing based on your business needs.
         </p>
       </div>
     </div>
@@ -196,7 +198,7 @@
           <div class="service-icon">
             <svg viewBox="0 0 32 32" fill="none"><path d="M4 8h24M4 16h16M4 24h10" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="26" cy="22" r="5" stroke="#C0C0C0" stroke-width="1.5"/><path d="M29 25l2 2" stroke="#C0C0C0" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <div class="service-tag">Starting at $10,000</div>
+          <div class="service-tag">Custom Pricing</div>
           <h3>The Pixel Vision Client Acquisition System</h3>
           <p>One end-to-end AI system that finds your ideal clients, reaches out with personalized messaging, follows up automatically, books calls on your calendar, and updates your CRM — all without manual effort.</p>
           <div class="acquisition-flow" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:20px 0;font-size:0.82rem;color:#aaa;">
@@ -439,5 +441,73 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+  <script>
+  /* ── HERO PARTICLE NETWORK ── */
+  (function() {
+    const canvas = document.getElementById('heroCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const EMERALD = [0, 200, 150];
+    const SILVER  = [180, 180, 200];
+    const COUNT   = 90;
+    const MAX_D   = 150;
+    const SPEED   = 0.35;
+    let W, H, pts;
+
+    function resize() {
+      W = canvas.width  = canvas.offsetWidth;
+      H = canvas.height = canvas.offsetHeight;
+    }
+    function init() {
+      pts = Array.from({ length: COUNT }, () => ({
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * SPEED * 2,
+        vy: (Math.random() - 0.5) * SPEED * 2,
+        r:  Math.random() * 1.4 + 1,
+        em: Math.random() < 0.28
+      }));
+    }
+    function frame() {
+      ctx.clearRect(0, 0, W, H);
+      for (let i = 0; i < pts.length; i++) {
+        for (let j = i + 1; j < pts.length; j++) {
+          const a = pts[i], b = pts[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const d = Math.sqrt(dx*dx + dy*dy);
+          if (d > MAX_D) continue;
+          const alpha = (1 - d / MAX_D) * 0.32;
+          const [r, g, bl] = (a.em || b.em) ? EMERALD : SILVER;
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(${r},${g},${bl},${alpha})`;
+          ctx.lineWidth = 0.75;
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+      for (const p of pts) {
+        const [r, g, b] = p.em ? EMERALD : SILVER;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${r},${g},${b},${p.em ? 0.9 : 0.45})`;
+        ctx.fill();
+        if (p.em) {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${r},${g},${b},0.06)`;
+          ctx.fill();
+        }
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+      }
+      requestAnimationFrame(frame);
+    }
+    window.addEventListener('resize', () => { resize(); init(); });
+    resize(); init(); frame();
+  })();
+  </script>
 </body>
 </html>

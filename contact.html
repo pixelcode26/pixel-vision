@@ -277,6 +277,7 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="chatbot.js"></script>
   <script>
   (function(){
     const canvas=document.getElementById('heroCanvas');
@@ -294,7 +295,8 @@
       requestAnimationFrame(frame);
     }
     window.addEventListener('resize',()=>{resize();init();});
-    resize();init();frame();
+    if(document.readyState==='complete'){resize();init();frame();}
+    else window.addEventListener('load',()=>{resize();init();frame();});
   })();
   </script>
 </body>
