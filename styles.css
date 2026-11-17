@@ -1358,3 +1358,86 @@ body {
   .page-title     { font-size: 1.75rem !important; }
 }
 
+
+/* ══════════════════════════════════════════════════════
+   CRITICAL FIXES
+   ══════════════════════════════════════════════════════ */
+
+/* Fix broken gradient text — must declare ALL properties together */
+.gradient-text {
+  background: linear-gradient(120deg, #ffffff 0%, var(--gold) 45%, #e8e8e8 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline !important;
+}
+
+/* Fix background — tone down green, keep it dark/neutral tech */
+body {
+  background:
+    radial-gradient(ellipse 90% 60% at 65% -5%, rgba(60,179,113,0.03) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(245,189,2,0.02) 0%, transparent 50%),
+    #000 !important;
+}
+
+/* Hero orb — much more subtle */
+.hero-gradient-orb {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(60,179,113,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(192,192,192,0.025) 0%, transparent 60%) !important;
+}
+
+/* Glow elements — subtler */
+.glow-1 { background: radial-gradient(circle, rgba(60,179,113,0.04) 0%, transparent 65%) !important; }
+.glow-2 { background: radial-gradient(circle, rgba(192,192,192,0.03) 0%, transparent 65%) !important; }
+.glow-3 { background: radial-gradient(circle, rgba(60,179,113,0.03) 0%, transparent 65%) !important; }
+
+/* Stats — clean up the font rendering */
+.stat-number {
+  font-family: var(--font-mono) !important;
+  font-weight: 700 !important;
+  font-size: clamp(2rem, 3.2vw, 2.6rem) !important;
+  letter-spacing: -0.03em !important;
+  color: var(--gold) !important;
+}
+
+/* Nav CTA — make it stand out more */
+.nav-cta.btn-emerald {
+  font-size: 0.85rem !important;
+  padding: 11px 22px !important;
+}
+
+/* Hero sub text — lighter, more readable */
+.hero-sub { color: rgba(255,255,255,0.45) !important; }
+
+/* Section backgrounds — cleaner separation */
+.about { background: transparent; }
+.services-preview { background: rgba(255,255,255,0.012) !important; }
+.how-it-works { background: transparent; }
+.niches { background: rgba(255,255,255,0.012) !important; }
+
+/* Service card grid — fix border treatment */
+.services-grid, .niches-grid, .faq-grid {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+
+/* Fix stat number letter-spacing — Space Mono distorts at negative tracking */
+.stat-number {
+  letter-spacing: 0.01em !important;
+  font-size: clamp(1.9rem, 3vw, 2.4rem) !important;
+}
+
+/* Services grid single-card fix — no side chrome */
+.services-preview .services-grid {
+  background: transparent !important;
+  border: none !important;
+  gap: 0 !important;
+}
+.services-preview .service-card {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
