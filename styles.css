@@ -1441,3 +1441,45 @@ body {
   border: 1px solid rgba(255,255,255,0.08) !important;
 }
 
+
+/* ══════════════════════════════════════════════════════
+   MOBILE FIXES + GRADIENT TEXT RELIABILITY
+   ══════════════════════════════════════════════════════ */
+
+/* Replace background-clip approach with solid gold — 100% reliable on all browsers/iOS */
+.gradient-text {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  color: var(--gold) !important;
+  display: inline !important;
+}
+
+/* Fix mobile text overflow — letter-spacing -0.04em is too tight at small sizes */
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2rem !important;
+    letter-spacing: -0.02em !important;
+    line-height: 1.1 !important;
+  }
+  h1, h2 { letter-spacing: -0.02em !important; }
+  .container { padding: 0 24px !important; }
+}
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.75rem !important;
+    letter-spacing: -0.01em !important;
+  }
+}
+
+/* Hero badge — fix mobile wrapping */
+.hero-badge {
+  max-width: 100% !important;
+  white-space: normal !important;
+  text-align: left !important;
+  line-height: 1.4 !important;
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+}
+
