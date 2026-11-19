@@ -265,8 +265,37 @@
 
   ];
 
-  // ── QUICK REPLY DEFAULTS ─────────────────────────────────────────────────
-  const DEFAULT_QR = ['What do you build?', 'How much does it cost?', 'Book a Free Call', 'Who do you work with?'];
+  // ── QUICK REPLY POOL — rotates so user never sees same set twice ─────────
+  const QR_POOL = [
+    'How does the process work?',
+    'What industries do you serve?',
+    'What do you build?',
+    'How much does it cost?',
+    'Book a Free Call',
+    'Who do you work with?',
+    'What\'s the ROI?',
+    'How long does it take?',
+    'Tell me about the AI agent',
+    'Tell me about the website',
+    'Is there a contract?',
+    'What do I need to provide?',
+    'Tell me about email automation',
+    'What about monthly management?',
+    'What about SEO?',
+    'Do I need technical knowledge?',
+    'How does it compare to other agencies?',
+    'Where are you located?',
+    'What happens after launch?',
+    'What CRMs do you integrate with?',
+  ];
+  let _lastQR = [];
+  function DEFAULT_QR() {
+    // Pick 4 from pool that weren't shown last time
+    const fresh = QR_POOL.filter(q => !_lastQR.includes(q));
+    const pool = fresh.length >= 4 ? fresh : QR_POOL;
+    const shuffled = pool.slice().sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 4);
+  }
 
   // ── FALLBACK ─────────────────────────────────────────────────────────────
   const FALLBACK = {
@@ -388,27 +417,43 @@
     if (t) t.remove();
   }
 
-  function buildQR(labels) {
+  function buildQR(labels, exclude) {
     qrRow.innerHTML = '';
-    (labels || DEFAULT_QR).forEach(label => {
+    // Remove the question just answered and any duplicates
+    let list = (labels || DEFAULT_QR()).filter(l => l !== exclude);
+    // If we ended up with fewer than 2 from the provided list, pad from pool
+    if (list.length < 2) {
+      const pad = QR_POOL.filter(q => !list.includes(q) && q !== exclude);
+      list = list.concat(pad.sort(() => Math.random() - 0.5)).slice(0, 4);
+    }
+    _lastQR = list.slice();
+    list.forEach(label => {
       const b = document.createElement('button');
       b.className = 'pv-qr';
       b.textContent = label;
       b.onclick = () => {
-        addMsg(label, 'user');
+        const clicked = label;
+        addMsg(clicked, 'user');
         qrRow.innerHTML = '';
-        const result = getResponse(label.toLowerCase());
+        const result = getResponse(clicked.toLowerCase());
         if (result) {
           const delay = 600 + Math.random() * 400;
           showTyping();
           setTimeout(() => {
             hideTyping();
             addMsg(result.answer, 'bot');
-            if (result.qr) setTimeout(() => buildQR(result.qr), 300);
+            const nextQR = result.qr
+              ? result.qr.filter(q => q !== clicked)
+              : DEFAULT_QR().filter(q => q !== clicked);
+            setTimeout(() => buildQR(nextQR, clicked), 300);
           }, delay);
         } else {
           showTyping();
-          setTimeout(() => { hideTyping(); addMsg(FALLBACK.answer, 'bot'); setTimeout(() => buildQR(FALLBACK.qr), 300); }, 700);
+          setTimeout(() => {
+            hideTyping();
+            addMsg(FALLBACK.answer, 'bot');
+            setTimeout(() => buildQR(FALLBACK.qr, clicked), 300);
+          }, 700);
         }
       };
       qrRow.appendChild(b);
@@ -428,11 +473,11 @@
       hideTyping();
       if (result) {
         addMsg(result.answer, 'bot');
-        if (result.qr) setTimeout(() => buildQR(result.qr), 300);
-        else setTimeout(() => buildQR(DEFAULT_QR), 300);
+        const nextQR = result.qr ? result.qr.filter(q => q !== text) : DEFAULT_QR().filter(q => q !== text);
+        setTimeout(() => buildQR(nextQR, text), 300);
       } else {
         addMsg(FALLBACK.answer, 'bot');
-        setTimeout(() => buildQR(FALLBACK.qr), 300);
+        setTimeout(() => buildQR(FALLBACK.qr, text), 300);
       }
     }, delay);
   }
@@ -446,7 +491,7 @@
     if (isOpen && msgs.children.length === 0) {
       setTimeout(() => {
         addMsg("👋 Hi! I'm the Pixel Vision AI assistant. I can answer questions about our services, pricing, process, and who we work with.<br><br>What would you like to know?", 'bot');
-        setTimeout(() => buildQR(DEFAULT_QR), 600);
+        setTimeout(() => buildQR(DEFAULT_QR()), 600);
       }, 200);
     }
     if (isOpen) setTimeout(() => input.focus(), 300);
