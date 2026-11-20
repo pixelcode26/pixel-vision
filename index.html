@@ -453,7 +453,16 @@
     const COUNT   = 90;
     const MAX_D   = 150;
     const SPEED   = 0.35;
+    const REPEL_D = 100;
+    const REPEL_F = 0.6;
     let W, H, pts;
+    let mouseX = -9999, mouseY = -9999;
+    canvas.addEventListener('mousemove', e => {
+      const r = canvas.getBoundingClientRect();
+      mouseX = e.clientX - r.left;
+      mouseY = e.clientY - r.top;
+    });
+    canvas.addEventListener('mouseleave', () => { mouseX = -9999; mouseY = -9999; });
 
     function resize() {
       W = canvas.width  = canvas.offsetWidth;
@@ -498,6 +507,20 @@
           ctx.arc(p.x, p.y, p.r * 3.5, 0, Math.PI * 2);
           ctx.fillStyle = `rgba(${r},${g},${b},0.06)`;
           ctx.fill();
+        }
+        // mouse repulsion
+        const mdx = p.x - mouseX, mdy = p.y - mouseY;
+        const md  = Math.sqrt(mdx * mdx + mdy * mdy);
+        if (md < REPEL_D && md > 0) {
+          const force = (1 - md / REPEL_D) * REPEL_F;
+          p.vx += (mdx / md) * force;
+          p.vy += (mdy / md) * force;
+          const maxV = SPEED * 4;
+          const spd  = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+          if (spd > maxV) { p.vx = (p.vx / spd) * maxV; p.vy = (p.vy / spd) * maxV; }
+        } else {
+          // dampen back to base speed
+          p.vx *= 0.98; p.vy *= 0.98;
         }
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
