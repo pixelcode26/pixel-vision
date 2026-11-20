@@ -14,35 +14,35 @@
     // ── WHAT IS PIXEL VISION ──
     {
       keys: ['what is pixel vision', 'who are you', 'about you', 'about pixel vision', 'tell me about', 'what do you do', 'what does pixel vision do'],
-      answer: "Pixel Vision is a full-service AI agency based in Washington, DC. We build complete AI-powered client acquisition systems — premium websites, automated outreach agents, email automation, and ongoing monthly optimization — custom-built for professional service firms.",
+      answer: "Pixel Vision is a full-service AI agency based in Washington, DC. We build complete AI-powered client acquisition systems, premium websites, automated outreach agents, email automation, and ongoing monthly optimization, custom-built for professional service firms.",
       qr: ['What do you build?', 'Who do you work with?', 'How much does it cost?']
     },
 
     // ── SERVICES OVERVIEW ──
     {
       keys: ['service', 'offer', 'what do you build', 'what you build', 'what can you do', 'build', 'make', 'create', 'provide', 'package', 'solution', 'product'],
-      answer: "We build four interconnected AI systems:<br><br>🌐 <strong>Premium AI Website</strong> — custom-built, never a template<br>🤖 <strong>AI Client Acquisition Agent</strong> — finds and reaches out to prospects automatically<br>📧 <strong>Email Outreach Automation</strong> — personalized sequences at scale<br>📈 <strong>Monthly Management</strong> — reporting, optimization, and ongoing improvement<br><br>Together they form one end-to-end system that finds clients while you focus on closing. <a href='services.html' style='color:var(--emerald)'>→ See All Services</a>",
+      answer: "We build four interconnected AI systems:<br><br>🌐 <strong>Premium AI Website</strong>, custom-built, never a template<br>🤖 <strong>AI Client Acquisition Agent</strong>, finds and reaches out to prospects automatically<br>📧 <strong>Email Outreach Automation</strong>, personalized sequences at scale<br>📈 <strong>Monthly Management</strong>, reporting, optimization, and ongoing improvement<br><br>Together they form one end-to-end system that finds clients while you focus on closing. <a href='services.html' style='color:var(--emerald)'>→ See All Services</a>",
       qr: ['Tell me about the website', 'Tell me about the AI agent', 'How much does it cost?', 'Book a Free Call']
     },
 
     // ── WEBSITE SERVICE ──
     {
       keys: ['website', 'web design', 'web page', 'site design', 'landing page', 'design a site', 'build a site', 'web development', 'frontend'],
-      answer: "Our websites are custom-built from scratch — never a template. Every site includes:<br><br>✦ Mobile-first, premium design<br>✦ AI-powered lead capture forms<br>✦ 24/7 chatbot (like this one)<br>✦ SEO architecture for local search<br>✦ CRM integration<br>✦ Fast load times and clean code<br><br>Your website becomes the hub of your entire client acquisition system. <a href='services.html' style='color:var(--emerald)'>→ Learn More</a>",
+      answer: "Our websites are custom-built from scratch, never a template. Every site includes:<br><br>✦ Mobile-first, premium design<br>✦ AI-powered lead capture forms<br>✦ 24/7 chatbot (like this one)<br>✦ SEO architecture for local search<br>✦ CRM integration<br>✦ Fast load times and clean code<br><br>Your website becomes the hub of your entire client acquisition system. <a href='services.html' style='color:var(--emerald)'>→ Learn More</a>",
       qr: ['How long to build?', 'How much does it cost?', 'What about SEO?', 'Book a Free Call']
     },
 
     // ── AI CLIENT ACQUISITION ──
     {
       keys: ['acquisition', 'ai agent', 'prospect', 'find clients', 'get clients', 'leads', 'lead generation', 'outreach agent', 'automated outreach', 'prospecting', 'pipeline'],
-      answer: "Our AI Client Acquisition Agent runs 24/7 on your behalf. It:<br><br>✦ Identifies your ideal prospects from multiple data sources<br>✦ Writes personalized outreach messages for each one<br>✦ Sends messages and follows up automatically<br>✦ Handles replies and books calls on your calendar<br>✦ Updates your CRM in real time<br><br>You show up to qualified calls — the AI handles everything before that. <a href='services.html' style='color:var(--emerald)'>→ Learn More</a>",
+      answer: "Our AI Client Acquisition Agent runs 24/7 on your behalf. It:<br><br>✦ Identifies your ideal prospects from multiple data sources<br>✦ Writes personalized outreach messages for each one<br>✦ Sends messages and follows up automatically<br>✦ Handles replies and books calls on your calendar<br>✦ Updates your CRM in real time<br><br>You show up to qualified calls, the AI handles everything before that. <a href='services.html' style='color:var(--emerald)'>→ Learn More</a>",
       qr: ['What industries does this work for?', 'How long to set up?', 'How much does it cost?', 'Book a Free Call']
     },
 
     // ── EMAIL AUTOMATION ──
     {
       keys: ['email', 'email automation', 'cold email', 'email outreach', 'follow up', 'follow-up', 'drip', 'sequence', 'newsletter', 'campaign'],
-      answer: "Our email automation system writes and sends personalized outreach to hundreds of prospects each week. It:<br><br>✦ Personalizes every message based on the recipient's business<br>✦ Sends at optimal delivery times to avoid spam filters<br>✦ Follows up automatically 2–4 times per prospect<br>✦ Routes warm replies directly to you<br>✦ Tracks open rates, clicks, and responses<br><br>Your inbox fills with warm leads — not busywork. <a href='services.html' style='color:var(--emerald)'>→ Learn More</a>",
+      answer: "Our email automation system writes and sends personalized outreach to hundreds of prospects each week. It:<br><br>✦ Personalizes every message based on the recipient's business<br>✦ Sends at optimal delivery times to avoid spam filters<br>✦ Follows up automatically 2–4 times per prospect<br>✦ Routes warm replies directly to you<br>✦ Tracks open rates, clicks, and responses<br><br>Your inbox fills with warm leads, not busywork. <a href='services.html' style='color:var(--emerald)'>→ Learn More</a>",
       qr: ['How many emails per week?', 'Does this work with my CRM?', 'How much does it cost?']
     },
 
@@ -56,7 +56,7 @@
     // ── PRICING ──
     {
       keys: ['price', 'cost', 'pricing', 'how much', 'quote', 'charge', 'fee', 'afford', 'expensive', 'cheap', 'budget', 'investment', 'rate', 'payment', 'pay'],
-      answer: "Every system is custom-quoted based on your industry, goals, and the scope of what we build. There's no one-size-fits-all number — a solo attorney's needs are different from a 10-broker CRE firm.<br><br>What we can say: our systems are built to pay for themselves. One new client from your AI system typically covers the entire investment.<br><br>Book a free 20-minute call and we'll give you an exact quote. <a href='contact.html' style='color:var(--emerald)'>→ Get Your Quote</a>",
+      answer: "Every system is custom-quoted based on your industry, goals, and the scope of what we build. There's no one-size-fits-all number, a solo attorney's needs are different from a 10-broker CRE firm.<br><br>What we can say: our systems are built to pay for themselves. One new client from your AI system typically covers the entire investment.<br><br>Book a free 20-minute call and we'll give you an exact quote. <a href='contact.html' style='color:var(--emerald)'>→ Get Your Quote</a>",
       qr: ['What\'s included in the price?', 'Is there a contract?', 'What about ROI?', 'Book a Free Call']
     },
 
@@ -70,77 +70,77 @@
     // ── TIMELINE ──
     {
       keys: ['how long', 'timeline', 'launch', 'when', 'time to build', 'delivery', 'turnaround', 'how fast', 'weeks', 'days'],
-      answer: "Most systems go live in <strong>2–4 weeks</strong> from the kickoff call. Here's how the timeline breaks down:<br><br>📋 <strong>Week 1</strong> — Discovery, strategy, and design<br>🔨 <strong>Weeks 2–3</strong> — Build: website, AI agent, email sequences<br>🚀 <strong>Week 4</strong> — Testing, refinement, and launch<br><br>Larger enterprise engagements may take 6–8 weeks. We move fast because every week without the system is a week without new leads.",
+      answer: "Most systems go live in <strong>2–4 weeks</strong> from the kickoff call. Here's how the timeline breaks down:<br><br>📋 <strong>Week 1</strong>, Discovery, strategy, and design<br>🔨 <strong>Weeks 2–3</strong>, Build: website, AI agent, email sequences<br>🚀 <strong>Week 4</strong>, Testing, refinement, and launch<br><br>Larger enterprise engagements may take 6–8 weeks. We move fast because every week without the system is a week without new leads.",
       qr: ['What do I need to provide?', 'What happens after launch?', 'Book a Free Call']
     },
 
     // ── WHAT I NEED TO PROVIDE ──
     {
       keys: ['what do i need', 'what do you need from me', 'my input', 'information needed', 'provide', 'my part', 'what i need to do', 'effort'],
-      answer: "Very little from you. To get started we need:<br><br>✦ A 20-minute discovery call to understand your business and goals<br>✦ Your logo and any brand colors (if you have them)<br>✦ A few sentences about your business and ideal client<br>✦ Access to your domain (we can help with this)<br><br>We handle everything else — design, copywriting, AI setup, testing, and launch. You review and approve before anything goes live.",
+      answer: "Very little from you. To get started we need:<br><br>✦ A 20-minute discovery call to understand your business and goals<br>✦ Your logo and any brand colors (if you have them)<br>✦ A few sentences about your business and ideal client<br>✦ Access to your domain (we can help with this)<br><br>We handle everything else, design, copywriting, AI setup, testing, and launch. You review and approve before anything goes live.",
       qr: ['How long does it take?', 'What about technical setup?', 'Book a Free Call']
     },
 
     // ── TECHNICAL KNOWLEDGE ──
     {
       keys: ['technical', 'tech', 'knowledge', 'experience needed', 'coding', 'programmer', 'complicated', 'hard to use', 'complex', 'manage', 'run it myself', 'ai knowledge'],
-      answer: "No technical knowledge required — none at all. We handle the entire build, launch, and ongoing management. You don't touch any code or AI settings.<br><br>Your only job is to show up to the calls your system books and close the deals. We handle everything else.",
+      answer: "No technical knowledge required, none at all. We handle the entire build, launch, and ongoing management. You don't touch any code or AI settings.<br><br>Your only job is to show up to the calls your system books and close the deals. We handle everything else.",
       qr: ['What do I need to provide?', 'What about ongoing management?', 'Book a Free Call']
     },
 
     // ── CONTRACT / COMMITMENT ──
     {
       keys: ['contract', 'commitment', 'cancel', 'lock in', 'lock-in', 'month to month', 'annual', 'long term', 'quit', 'leave', 'exit'],
-      answer: "We build relationships, not traps. After the initial build phase, monthly management runs month-to-month — no long-term lock-in. We keep clients because the systems deliver results, not because of a contract clause.<br><br>That said, we do ask for a minimum initial engagement to properly build and launch your system. Book a call and we'll walk you through exactly how it works. <a href='contact.html' style='color:var(--emerald)'>→ Book a Free Call</a>",
+      answer: "We build relationships, not traps. After the initial build phase, monthly management runs month-to-month, no long-term lock-in. We keep clients because the systems deliver results, not because of a contract clause.<br><br>That said, we do ask for a minimum initial engagement to properly build and launch your system. Book a call and we'll walk you through exactly how it works. <a href='contact.html' style='color:var(--emerald)'>→ Book a Free Call</a>",
       qr: ['How much does it cost?', 'What\'s included monthly?', 'Book a Free Call']
     },
 
     // ── WHAT HAPPENS AFTER LAUNCH ──
     {
       keys: ['after launch', 'what happens after', 'next steps', 'post launch', 'ongoing', 'maintain', 'keep running', 'update'],
-      answer: "After your system launches, here's what happens each month:<br><br>📊 We review your lead volume and quality<br>✍️ We refine outreach messaging based on response rates<br>🔄 We refresh your prospect lists with new targets<br>📈 We send you a clear performance report<br>💬 We're available for questions and strategy calls<br><br>Your system compounds over time — it gets better every month as we learn what works for your specific market.",
+      answer: "After your system launches, here's what happens each month:<br><br>📊 We review your lead volume and quality<br>✍️ We refine outreach messaging based on response rates<br>🔄 We refresh your prospect lists with new targets<br>📈 We send you a clear performance report<br>💬 We're available for questions and strategy calls<br><br>Your system compounds over time, it gets better every month as we learn what works for your specific market.",
       qr: ['How much does monthly management cost?', 'Can I cancel anytime?', 'Book a Free Call']
     },
 
     // ── CRM / INTEGRATIONS ──
     {
       keys: ['crm', 'salesforce', 'hubspot', 'integration', 'connect', 'sync', 'software', 'tool', 'existing system', 'calendar', 'google calendar'],
-      answer: "Yes, we integrate with your existing tools. We work with:<br><br>✦ <strong>CRMs:</strong> HubSpot, Salesforce, GoHighLevel, Pipedrive, and others<br>✦ <strong>Calendars:</strong> Google Calendar, Calendly, Microsoft Outlook<br>✦ <strong>Email:</strong> Gmail, Outlook, custom domains<br>✦ <strong>Communication:</strong> Slack notifications for new leads<br><br>If you use something not on this list, let us know — we've likely worked with it or can build the connection.",
+      answer: "Yes, we integrate with your existing tools. We work with:<br><br>✦ <strong>CRMs:</strong> HubSpot, Salesforce, GoHighLevel, Pipedrive, and others<br>✦ <strong>Calendars:</strong> Google Calendar, Calendly, Microsoft Outlook<br>✦ <strong>Email:</strong> Gmail, Outlook, custom domains<br>✦ <strong>Communication:</strong> Slack notifications for new leads<br><br>If you use something not on this list, let us know, we've likely worked with it or can build the connection.",
       qr: ['What do I need to provide?', 'How long to set up?', 'Book a Free Call']
     },
 
     // ── SEO ──
     {
       keys: ['seo', 'search engine', 'google ranking', 'rank on google', 'organic', 'search ranking', 'keyword', 'google my business'],
-      answer: "Every website we build is architected for search from day one. That includes:<br><br>✦ Keyword-optimized page structure and content<br>✦ Local SEO setup (Google Business Profile)<br>✦ Fast load times (Core Web Vitals)<br>✦ Schema markup for rich search results<br>✦ Practice-area and location pages where relevant<br><br>SEO results compound over time — the longer your site is live, the more visibility it earns.",
+      answer: "Every website we build is architected for search from day one. That includes:<br><br>✦ Keyword-optimized page structure and content<br>✦ Local SEO setup (Google Business Profile)<br>✦ Fast load times (Core Web Vitals)<br>✦ Schema markup for rich search results<br>✦ Practice-area and location pages where relevant<br><br>SEO results compound over time, the longer your site is live, the more visibility it earns.",
       qr: ['Tell me about the website', 'How long for SEO results?', 'Book a Free Call']
     },
 
     // ── HOW LONG FOR SEO RESULTS ──
     {
       keys: ['how long for seo', 'seo timeline', 'when will i rank', 'google results', 'seo results'],
-      answer: "SEO is a long-term strategy — most sites start seeing meaningful movement within 3–6 months, with strong rankings typically established by 9–12 months. That's why we pair SEO with our AI outreach system: the outreach gets you leads immediately while SEO builds your long-term organic pipeline.",
+      answer: "SEO is a long-term strategy, most sites start seeing meaningful movement within 3–6 months, with strong rankings typically established by 9–12 months. That's why we pair SEO with our AI outreach system: the outreach gets you leads immediately while SEO builds your long-term organic pipeline.",
       qr: ['Tell me about the AI agent', 'Book a Free Call']
     },
 
     // ── HOW MANY EMAILS / VOLUME ──
     {
       keys: ['how many emails', 'volume', 'how many leads', 'how many prospects', 'scale', 'capacity'],
-      answer: "Our systems are built to scale to your market. Depending on your industry and goals, we typically set up outreach to anywhere from 200–1,000+ qualified prospects per month. We focus on quality over raw volume — a highly personalized message to 300 ideal prospects outperforms a generic blast to 3,000.",
+      answer: "Our systems are built to scale to your market. Depending on your industry and goals, we typically set up outreach to anywhere from 200–1,000+ qualified prospects per month. We focus on quality over raw volume, a highly personalized message to 300 ideal prospects outperforms a generic blast to 3,000.",
       qr: ['What industries work best?', 'How much does it cost?', 'Book a Free Call']
     },
 
     // ── COMMERCIAL REAL ESTATE ──
     {
       keys: ['real estate', 'cre', 'commercial real estate', 'commercial property', 'broker', 'brokerage', 'property owner', 'investor', 'tenant', 'landlord', 'lease', 'multifamily', 'office space'],
-      answer: "Commercial real estate is our primary focus. CRE is relationship-driven and high-value — exactly where our systems shine. We build:<br><br>✦ Authority websites that position you as the go-to broker in your market<br>✦ AI agents that identify property owners, investors, and tenants<br>✦ Personalized outreach that references specific properties and market conditions<br>✦ Automated follow-up so no deal falls through the cracks<br><br>CRE clients typically see their pipeline fill within the first 30–60 days. <a href='who-we-serve.html#commercial-real-estate' style='color:var(--emerald)'>→ Learn More</a>",
+      answer: "Commercial real estate is our primary focus. CRE is relationship-driven and high-value, exactly where our systems shine. We build:<br><br>✦ Authority websites that position you as the go-to broker in your market<br>✦ AI agents that identify property owners, investors, and tenants<br>✦ Personalized outreach that references specific properties and market conditions<br>✦ Automated follow-up so no deal falls through the cracks<br><br>CRE clients typically see their pipeline fill within the first 30–60 days. <a href='who-we-serve.html#commercial-real-estate' style='color:var(--emerald)'>→ Learn More</a>",
       qr: ['How much does it cost?', 'How long to launch?', 'Book a Free Call']
     },
 
     // ── LAW FIRMS ──
     {
       keys: ['law', 'lawyer', 'attorney', 'legal', 'law firm', 'practice', 'litigation', 'personal injury', 'family law', 'criminal', 'immigration', 'estate planning', 'corporate law'],
-      answer: "We build complete client acquisition systems for law firms. Legal clients research extensively before choosing — your digital presence needs to communicate authority and trust. Our systems include:<br><br>✦ Authority-positioning websites with practice-area pages<br>✦ AI intake systems that qualify leads before they reach you<br>✦ Automated follow-up for people who contact you but don't book<br>✦ Local SEO to rank for '[practice area] attorney near me'<br>✦ Review generation campaigns<br><br><em>Note: We build marketing systems, not legal advice tools. All messaging is reviewed for compliance considerations.</em> <a href='who-we-serve.html#law-firms' style='color:var(--emerald)'>→ Learn More</a>",
+      answer: "We build complete client acquisition systems for law firms. Legal clients research extensively before choosing, your digital presence needs to communicate authority and trust. Our systems include:<br><br>✦ Authority-positioning websites with practice-area pages<br>✦ AI intake systems that qualify leads before they reach you<br>✦ Automated follow-up for people who contact you but don't book<br>✦ Local SEO to rank for '[practice area] attorney near me'<br>✦ Review generation campaigns<br><br><em>Note: We build marketing systems, not legal advice tools. All messaging is reviewed for compliance considerations.</em> <a href='who-we-serve.html#law-firms' style='color:var(--emerald)'>→ Learn More</a>",
       qr: ['How much does it cost?', 'How long to launch?', 'Book a Free Call']
     },
 
@@ -175,21 +175,21 @@
     // ── PATIENT PRIVACY / COMPLIANCE ──
     {
       keys: ['hipaa', 'privacy', 'compliance', 'patient data', 'gdpr', 'data protection', 'secure', 'confidential', 'regulation'],
-      answer: "We take data privacy seriously. For healthcare and legal clients, we build systems that keep sensitive information protected. Our outreach systems use publicly available professional data — we do not access or store protected health information (PHI).<br><br><em>Important: We are not attorneys and cannot provide legal compliance advice. We always recommend consulting with your compliance officer or attorney regarding your specific requirements. Any compliance-related decisions are your responsibility.</em>",
+      answer: "We take data privacy seriously. For healthcare and legal clients, we build systems that keep sensitive information protected. Our outreach systems use publicly available professional data, we do not access or store protected health information (PHI).<br><br><em>Important: We are not attorneys and cannot provide legal compliance advice. We always recommend consulting with your compliance officer or attorney regarding your specific requirements. Any compliance-related decisions are your responsibility.</em>",
       qr: ['Tell me about the AI agent', 'Book a Free Call']
     },
 
     // ── COMPARED TO OTHER AGENCIES ──
     {
       keys: ['different', 'better', 'versus', 'vs', 'compared to', 'other agency', 'competitor', 'why you', 'why pixel vision', 'why should i choose'],
-      answer: "Most agencies build you a website and walk away. We build a complete, integrated system:<br><br>✦ <strong>Not just a website</strong> — a full AI acquisition machine<br>✦ <strong>Not a template</strong> — custom-built for your business<br>✦ <strong>Not set-and-forget</strong> — monthly optimization and management<br>✦ <strong>Not generalist</strong> — we focus exclusively on professional service firms<br><br>We're not the cheapest option. We're built for businesses where one new client is worth $5,000–$50,000+, and where your digital presence should match the quality of your work.",
+      answer: "Most agencies build you a website and walk away. We build a complete, integrated system:<br><br>✦ <strong>Not just a website</strong>, a full AI acquisition machine<br>✦ <strong>Not a template</strong>, custom-built for your business<br>✦ <strong>Not set-and-forget</strong>, monthly optimization and management<br>✦ <strong>Not generalist</strong>, we focus exclusively on professional service firms<br><br>We're not the cheapest option. We're built for businesses where one new client is worth $5,000–$50,000+, and where your digital presence should match the quality of your work.",
       qr: ['What\'s your pricing?', 'Who do you work with?', 'Book a Free Call']
     },
 
     // ── LOCATION ──
     {
       keys: ['location', 'where', 'based', 'dc', 'washington', 'virginia', 'maryland', 'dmv', 'nationwide', 'remote', 'in person'],
-      answer: "Pixel Vision is based in Washington, DC. We serve clients nationwide — the entire engagement is conducted remotely (strategy calls, reviews, and approvals are all done virtually). We have deep roots in the DC, Maryland, and Virginia market but have worked with clients in New York, Texas, California, and beyond.",
+      answer: "Pixel Vision is based in Washington, DC. We serve clients nationwide, the entire engagement is conducted remotely (strategy calls, reviews, and approvals are all done virtually). We have deep roots in the DC, Maryland, and Virginia market but have worked with clients in New York, Texas, California, and beyond.",
       qr: ['Book a Free Call', 'How does the process work?']
     },
 
@@ -203,28 +203,28 @@
     // ── BOOK A CALL ──
     {
       keys: ['book', 'schedule', 'calendly', 'appointment', 'meeting', 'strategy call', 'free call', 'get started', 'start', 'begin', 'sign up'],
-      answer: "Book your free 20-minute strategy call — no pitch, no pressure. On the call we'll:<br><br>✦ Learn about your business and your ideal client<br>✦ Map out what a custom AI system would look like for you<br>✦ Give you a clear sense of timeline and investment<br>✦ Answer every question you have<br><br>No obligation. <a href='https://calendly.com/pixelvision2026' target='_blank' style='color:var(--emerald)'>→ Book on Calendly</a>",
+      answer: "Book your free 20-minute strategy call, no pitch, no pressure. On the call we'll:<br><br>✦ Learn about your business and your ideal client<br>✦ Map out what a custom AI system would look like for you<br>✦ Give you a clear sense of timeline and investment<br>✦ Answer every question you have<br><br>No obligation. <a href='https://calendly.com/pixelvision2026' target='_blank' style='color:var(--emerald)'>→ Book on Calendly</a>",
       qr: ['What do I need to prepare?', 'How long is the call?', 'What happens after?']
     },
 
     // ── CALL PREPARATION ──
     {
       keys: ['prepare', 'what to bring', 'what to expect', 'discovery call', 'strategy call prep', 'how long is the call'],
-      answer: "Nothing to prepare — just show up. The call is 20 minutes and completely informal. We'll ask you about:<br><br>✦ Your business and what you do<br>✦ Who your ideal client is<br>✦ Your current lead generation situation<br>✦ What growth looks like for you<br><br>By the end you'll have a clear picture of exactly what we'd build and what it would cost. <a href='https://calendly.com/pixelvision2026' target='_blank' style='color:var(--emerald)'>→ Book a Free Call</a>",
+      answer: "Nothing to prepare, just show up. The call is 20 minutes and completely informal. We'll ask you about:<br><br>✦ Your business and what you do<br>✦ Who your ideal client is<br>✦ Your current lead generation situation<br>✦ What growth looks like for you<br><br>By the end you'll have a clear picture of exactly what we'd build and what it would cost. <a href='https://calendly.com/pixelvision2026' target='_blank' style='color:var(--emerald)'>→ Book a Free Call</a>",
       qr: ['Book a Free Call', 'How much does it cost?']
     },
 
     // ── PROCESS / HOW IT WORKS ──
     {
       keys: ['process', 'how does it work', 'how it works', 'steps', 'what happens', 'walk me through', 'explain', 'overview'],
-      answer: "Here's how we work together from start to finish:<br><br><strong>Step 1 — Free Strategy Call (20 min)</strong><br>We learn about your business, goals, and ideal client.<br><br><strong>Step 2 — Custom System Design (3–5 days)</strong><br>We design your complete AI system architecture.<br><br><strong>Step 3 — Build & Launch (2–4 weeks)</strong><br>We build everything and launch your system live.<br><br><strong>Step 4 — Monthly Optimization (ongoing)</strong><br>We refine, optimize, and report every month.<br><br>You're involved at every review point and nothing goes live without your approval.",
+      answer: "Here's how we work together from start to finish:<br><br><strong>Step 1, Free Strategy Call (20 min)</strong><br>We learn about your business, goals, and ideal client.<br><br><strong>Step 2, Custom System Design (3–5 days)</strong><br>We design your complete AI system architecture.<br><br><strong>Step 3, Build & Launch (2–4 weeks)</strong><br>We build everything and launch your system live.<br><br><strong>Step 4, Monthly Optimization (ongoing)</strong><br>We refine, optimize, and report every month.<br><br>You're involved at every review point and nothing goes live without your approval.",
       qr: ['How long does it take?', 'What do I need to provide?', 'Book a Free Call']
     },
 
     // ── WHAT RESULTS TO EXPECT ──
     {
       keys: ['expect', 'realistic', 'realistic expectations', 'how many leads', 'results timeline', 'when will i see results', 'first month', 'guarantee'],
-      answer: "Here's what a realistic first 90 days looks like:<br><br>📆 <strong>Month 1</strong> — System launches, outreach begins, initial leads start coming in<br>📆 <strong>Month 2</strong> — We refine messaging based on early response data, lead quality improves<br>📆 <strong>Month 3</strong> — Consistent pipeline established, SEO begins building momentum<br><br>Results vary by industry, market, and offer strength. We don't guarantee a specific number of leads — but we do guarantee we'll optimize until your system is performing. Book a call to talk about realistic expectations for your specific situation.",
+      answer: "Here's what a realistic first 90 days looks like:<br><br>📆 <strong>Month 1</strong>, System launches, outreach begins, initial leads start coming in<br>📆 <strong>Month 2</strong>, We refine messaging based on early response data, lead quality improves<br>📆 <strong>Month 3</strong>, Consistent pipeline established, SEO begins building momentum<br><br>Results vary by industry, market, and offer strength. We don't guarantee a specific number of leads, but we do guarantee we'll optimize until your system is performing. Book a call to talk about realistic expectations for your specific situation.",
       qr: ['What\'s your pricing?', 'What industries work best?', 'Book a Free Call']
     },
 
@@ -238,34 +238,34 @@
     // ── NOT SURE / HESITANT ──
     {
       keys: ['not sure', 'unsure', 'maybe', 'thinking about it', 'considering', 'not ready', 'later', 'hesitant', 'nervous', 'worried', 'skeptical', 'doubt'],
-      answer: "That's completely fair — investing in a new system is a real decision. The best thing to do is book a free 20-minute call. You'll get a clear picture of exactly what we'd build, what it costs, and what results look like for businesses like yours. No pressure, no obligation — just information to help you decide. <a href='contact.html' style='color:var(--emerald)'>→ Book a Free Call</a>",
+      answer: "That's completely fair, investing in a new system is a real decision. The best thing to do is book a free 20-minute call. You'll get a clear picture of exactly what we'd build, what it costs, and what results look like for businesses like yours. No pressure, no obligation, just information to help you decide. <a href='contact.html' style='color:var(--emerald)'>→ Book a Free Call</a>",
       qr: ['What\'s the ROI?', 'Is there a contract?', 'Book a Free Call']
     },
 
     // ── ALREADY HAVE A WEBSITE ──
     {
       keys: ['already have a website', 'existing website', 'current website', 'rebrand', 'redesign', 'improve my site', 'update my site'],
-      answer: "If you already have a website, we can either rebuild it completely or build your AI acquisition system on top of your existing domain. Many clients come to us with an existing site that just isn't converting — we turn it into a full client acquisition machine.<br><br>On the strategy call we'll look at what you have and tell you exactly what we'd recommend.",
+      answer: "If you already have a website, we can either rebuild it completely or build your AI acquisition system on top of your existing domain. Many clients come to us with an existing site that just isn't converting, we turn it into a full client acquisition machine.<br><br>On the strategy call we'll look at what you have and tell you exactly what we'd recommend.",
       qr: ['What\'s included in the website?', 'Book a Free Call']
     },
 
     // ── SOCIAL MEDIA ──
     {
       keys: ['social media', 'instagram', 'linkedin', 'facebook', 'twitter', 'tiktok', 'content', 'posting', 'social'],
-      answer: "We focus on direct client acquisition through your website and AI outreach — not social media content creation. That said, your website and AI system are the foundation that makes everything else (including social) more effective. We also build LinkedIn outreach sequences for B2B clients, which is part of our AI acquisition agent.",
+      answer: "We focus on direct client acquisition through your website and AI outreach, not social media content creation. That said, your website and AI system are the foundation that makes everything else (including social) more effective. We also build LinkedIn outreach sequences for B2B clients, which is part of our AI acquisition agent.",
       qr: ['Tell me about the AI agent', 'What do you build?', 'Book a Free Call']
     },
 
     // ── HOW AI WORKS ──
     {
       keys: ['how does the ai work', 'what ai', 'which ai', 'chatgpt', 'openai', 'artificial intelligence', 'machine learning', 'automation', 'how is it automated'],
-      answer: "We use a combination of AI tools and automation platforms to build your system. This includes:<br><br>✦ Large language models (similar to ChatGPT) for personalizing outreach messages<br>✦ Data enrichment tools to identify and research your ideal prospects<br>✦ Automation platforms to orchestrate the sequences<br>✦ CRM integrations to keep everything organized<br><br>You don't need to know how any of this works — that's what you're paying us for.",
+      answer: "We use a combination of AI tools and automation platforms to build your system. This includes:<br><br>✦ Large language models (similar to ChatGPT) for personalizing outreach messages<br>✦ Data enrichment tools to identify and research your ideal prospects<br>✦ Automation platforms to orchestrate the sequences<br>✦ CRM integrations to keep everything organized<br><br>You don't need to know how any of this works, that's what you're paying us for.",
       qr: ['Do I need technical knowledge?', 'What do I need to provide?', 'Book a Free Call']
     },
 
   ];
 
-  // ── QUICK REPLY POOL — rotates so user never sees same set twice ─────────
+  // ── QUICK REPLY POOL, rotates so user never sees same set twice ─────────
   const QR_POOL = [
     'How does the process work?',
     'What industries do you serve?',
@@ -299,11 +299,11 @@
 
   // ── FALLBACK ─────────────────────────────────────────────────────────────
   const FALLBACK = {
-    answer: "That's a great question. For anything specific to your business, the best next step is a free 20-minute strategy call — we can give you a real, tailored answer. <a href='contact.html' style='color:var(--emerald)'>→ Book a Free Call</a>",
+    answer: "That's a great question. For anything specific to your business, the best next step is a free 20-minute strategy call, we can give you a real, tailored answer. <a href='contact.html' style='color:var(--emerald)'>→ Book a Free Call</a>",
     qr: ['What do you build?', 'How much does it cost?', 'Book a Free Call']
   };
 
-  // ── SMART MATCHING — scores and returns best match ───────────────────────
+  // ── SMART MATCHING, scores and returns best match ───────────────────────
   function getResponse(text) {
     const lower = text.toLowerCase().trim();
 
@@ -345,7 +345,7 @@
 
     if (shortcuts[lower]) return shortcuts[lower];
 
-    // Score each KB entry — count how many keywords match
+    // Score each KB entry, count how many keywords match
     let best = null;
     let bestScore = 0;
     for (const item of KB) {
