@@ -1483,3 +1483,94 @@ body {
   flex-wrap: wrap !important;
 }
 
+
+/* ══════════════════════════════════════════════════
+   ANIMATIONS & INTERACTIVITY UPGRADE
+   ══════════════════════════════════════════════════ */
+
+/* ── 1. SCROLL PROGRESS BAR ─────────────────────── */
+#pv-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--emerald), var(--gold));
+  z-index: 10000;
+  pointer-events: none;
+  transition: width 0.08s linear;
+}
+
+/* ── 3. FLOW CHIP ACTIVE GLOW UPGRADE ───────────── */
+.flow-chip.active {
+  background: rgba(60,179,113,0.22) !important;
+  border-color: var(--emerald) !important;
+  color: var(--emerald) !important;
+  box-shadow: 0 0 10px rgba(60,179,113,0.5), 0 0 22px rgba(60,179,113,0.25);
+  animation: chipPulse 0.6s ease-in-out;
+}
+@keyframes chipPulse {
+  0%   { box-shadow: 0 0 4px rgba(60,179,113,0.3); }
+  50%  { box-shadow: 0 0 18px rgba(60,179,113,0.7), 0 0 36px rgba(60,179,113,0.3); }
+  100% { box-shadow: 0 0 10px rgba(60,179,113,0.5), 0 0 22px rgba(60,179,113,0.25); }
+}
+
+/* ── 7. NICHE ICON FLOAT ANIMATION ─────────────── */
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+.niche-icon {
+  animation: floatBob 3s ease-in-out infinite;
+}
+.niche-card:nth-child(1) .niche-icon { animation-delay: 0s; }
+.niche-card:nth-child(2) .niche-icon { animation-delay: 0.4s; }
+.niche-card:nth-child(3) .niche-icon { animation-delay: 0.8s; }
+.niche-card:nth-child(4) .niche-icon { animation-delay: 1.2s; }
+.niche-card:nth-child(5) .niche-icon { animation-delay: 1.6s; }
+.niche-card:nth-child(6) .niche-icon { animation-delay: 2.0s; }
+
+/* ── 8. STEP NUM GLOW ON SCROLL-IN ──────────────── */
+@keyframes stepNumGlow {
+  0%   { text-shadow: none; }
+  40%  { text-shadow: 0 0 20px rgba(60,179,113,0.9), 0 0 40px rgba(60,179,113,0.5); }
+  100% { text-shadow: 0 0 8px rgba(60,179,113,0.3); }
+}
+.step-card.aos-animate .step-num {
+  animation: stepNumGlow 1.4s ease forwards;
+}
+
+/* ── 9. CTA GLOW BREATHING ──────────────────────── */
+@keyframes ctaBreath {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.08); }
+}
+.cta-glow {
+  animation: ctaBreath 4s ease-in-out infinite !important;
+}
+
+/* ── 10. CURSOR GLOW TRAIL ──────────────────────── */
+#pv-cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(192,192,192,0.6);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+#pv-cursor.hovered {
+  width: 28px;
+  height: 28px;
+  background: rgba(60,179,113,0.55);
+  box-shadow: 0 0 16px rgba(60,179,113,0.5);
+}
+@media (hover: none) {
+  #pv-cursor { display: none; }
+}
+
+/* ── 5. MAGNETIC CTA — no extra CSS needed, handled in JS ── */
