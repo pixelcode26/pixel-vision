@@ -1719,3 +1719,12 @@ body::before { display: none !important; }
     opacity: 0.85;
   }
 }
+
+/* ── Mobile AOS fix: prevent blank sections on small screens ── */
+@media (max-width: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
