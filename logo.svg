@@ -83,14 +83,4 @@
     fill="#ffffff"
     text-anchor="middle">PIXEL VISION</text>
 
-  <!-- ── TAGLINE ── -->
-  <text
-    x="250" y="378"
-    font-family="'Space Mono', 'Courier New', monospace"
-    font-size="9.5"
-    font-weight="400"
-    letter-spacing="4.5"
-    fill="#3CB371"
-    text-anchor="middle">AI AGENCY · WASHINGTON DC</text>
-
 </svg>
