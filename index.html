@@ -66,231 +66,171 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge animate-fade-up">
-          AI Client Acquisition &middot; Nationwide
-        </div>
-
-        <h1 class="hero-headline">Stop waiting<br>for referrals.</h1>
-
-        <p class="hero-sub animate-fade-up delay-2">
-          We build automated outreach systems for professional service firms. We identify your prospects, write personalized emails, follow up, and book calls on your calendar. You just close.
-        </p>
-        <div class="hero-deliverables animate-fade-up delay-3">
-          <span>Website</span>
-          <span>AI Outreach Agent</span>
-          <span>Email Automation</span>
-          <span>Monthly Management</span>
-        </div>
-        <div class="hero-actions animate-fade-up delay-3">
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="pv-hero">
+    <div class="pv-hero__glow" aria-hidden="true"></div>
+    <div class="container pv-hero__inner">
+      <div class="pv-hero__copy">
+        <span class="badge animate-fade-up">AI CLIENT ACQUISITION</span>
+        <h1 class="pv-hero__h1 animate-fade-up delay-1">Your next 10 clients<br>are already out there.</h1>
+        <p class="pv-hero__sub animate-fade-up delay-2">We build AI systems that find them, reach out automatically, and book calls on your calendar.</p>
+        <div class="pv-hero__actions animate-fade-up delay-3">
           <!-- TODO: update Calendly link when account is confirmed -->
-          <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald">Book a Free Call</a>
+          <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald btn-large">Book a Free Call</a>
+          <a href="#how-it-works" class="btn btn-ghost btn-large">See How It Works</a>
         </div>
       </div>
-      <div class="hero-terminal" aria-hidden="true">
+      <div class="hero-terminal animate-fade-up delay-2" aria-hidden="true">
         <div class="terminal-bar">
           <span class="t-dot t-dot--red"></span>
           <span class="t-dot t-dot--yellow"></span>
           <span class="t-dot t-dot--green"></span>
-          <span class="t-label">pv-agent · outreach</span>
+          <span class="t-label">pv-agent · running</span>
         </div>
         <div class="terminal-body">
           <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">pv scan --market "commercial-real-estate" --geo "miami, fl"</span></div>
-          <div class="t-line t-gap"></div>
+          <div class="t-gap"></div>
           <div class="t-line"><span class="t-muted">Scanning public records, LinkedIn, property filings...</span></div>
           <div class="t-line"><span class="t-muted">Applying ICP filters: active listings, deal size, recency</span></div>
-          <div class="t-line t-gap"></div>
+          <div class="t-gap"></div>
           <div class="t-line"><span class="t-green">✓</span> <span class="t-white">1,204 prospects scanned</span></div>
           <div class="t-line"><span class="t-green">✓</span> <span class="t-white">89 high-priority matches identified</span></div>
-          <div class="t-line t-gap"></div>
+          <div class="t-gap"></div>
           <div class="t-line"><span class="t-muted">Drafting personalized outreach...</span></div>
           <div class="t-line t-indent"><span class="t-quote">"Hi Marcus, noticed your Q3 industrial portfolio—"</span></div>
           <div class="t-line t-indent"><span class="t-quote">"Hi Sarah, your Brickell mixed-use project caught—"</span></div>
-          <div class="t-line t-gap"></div>
+          <div class="t-gap"></div>
           <div class="t-line"><span class="t-green">→</span> <span class="t-white">12 emails sent today</span></div>
           <div class="t-line"><span class="t-green">→</span> <span class="t-white">3 replies · 1 call booked</span></div>
           <div class="t-line"><span class="t-green">→</span> <span class="t-white">CRM updated automatically</span></div>
-          <div class="t-line t-gap"></div>
-          <div class="t-line t-cursor-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+          <div class="t-gap"></div>
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="facts-bar">
-    <div class="container">
-      <p class="facts-line">Custom-built for your business&nbsp;&nbsp;·&nbsp;&nbsp;Launches in 2–4 weeks&nbsp;&nbsp;·&nbsp;&nbsp;No technical knowledge required&nbsp;&nbsp;·&nbsp;&nbsp;Month-to-month&nbsp;&nbsp;·&nbsp;&nbsp;Fully remote</p>
+  <!-- ═══════════ MARQUEE ═══════════ -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>Commercial Real Estate</span><span class="marquee-dot">·</span>
+      <span>Law Firms</span><span class="marquee-dot">·</span>
+      <span>Med Spas</span><span class="marquee-dot">·</span>
+      <span>Dental Practices</span><span class="marquee-dot">·</span>
+      <span>Financial Advisory</span><span class="marquee-dot">·</span>
+      <span>Real Estate Brokers</span><span class="marquee-dot">·</span>
+      <span>Commercial Real Estate</span><span class="marquee-dot">·</span>
+      <span>Law Firms</span><span class="marquee-dot">·</span>
+      <span>Med Spas</span><span class="marquee-dot">·</span>
+      <span>Dental Practices</span><span class="marquee-dot">·</span>
+      <span>Financial Advisory</span><span class="marquee-dot">·</span>
+      <span>Real Estate Brokers</span><span class="marquee-dot">·</span>
     </div>
-  </section>
+  </div>
 
-  <section class="about section">
+  <!-- ═══════════ SYSTEM / FEATURE CARDS ═══════════ -->
+  <section class="pv-section">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-left">
-          <div class="section-label">What we do</div>
-          <h2 class="section-title">We build systems,<br>not just websites.</h2>
-        </div>
-        <div class="about-right">
-          <p class="about-text">Most agencies hand you a website and disappear. We build four connected systems: a custom website, an AI prospecting agent, automated email sequences, and ongoing monthly optimization. Each one is built from scratch for your specific business and market.</p>
-          <p class="about-text">The result is a consistent pipeline of qualified prospects reaching out to you, without cold calling, without paying per lead, and without hiring a sales team.</p>
-          <a href="services.html" class="btn btn-outline">Explore Our Systems</a>
-        </div>
+      <div class="pv-section__header">
+        <span class="eyebrow">What We Build</span>
+        <h2 class="pv-section__h2">One system. Four parts.<br>Zero cold calling.</h2>
       </div>
-    </div>
-  </section>
-
-  <section class="services-preview section">
-    <div class="container">
-      <div class="section-header section-header--left" data-aos="fade-up">
-        <div class="section-label">The system</div>
-        <h2 class="section-title">Four parts.<br>One pipeline.</h2>
-      </div>
-      <div class="system-parts-wrapper" data-aos="fade-up">
-          <div class="system-parts">
-            <div class="system-part"><span class="part-num">01</span><div><strong>Premium Website</strong><p>Custom-built, never a template. Designed to convert the traffic your outreach generates.</p></div></div>
-            <div class="system-part"><span class="part-num">02</span><div><strong>AI Outreach Agent</strong><p>Identifies your ideal prospects, writes personalized messages for each one, and sends them automatically.</p></div></div>
-            <div class="system-part"><span class="part-num">03</span><div><strong>Email Automation</strong><p>Follows up 2–4 times per prospect. Routes warm replies directly to you. Books calls on your calendar.</p></div></div>
-            <div class="system-part"><span class="part-num">04</span><div><strong>Monthly Management</strong><p>We review performance, refresh prospect lists, and optimize messaging every single month.</p></div></div>
+      <div class="system-grid">
+        <div class="system-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="system-card__icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="4" width="24" height="16" rx="2" stroke="#3CB371" stroke-width="1.6"/><path d="M9 24h10M14 20v4" stroke="#3CB371" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
-          <a href="services.html" class="service-link">See the full system →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="how-it-works section">
-    <div class="container">
-      <div class="section-header section-header--left" data-aos="fade-up">
-        <div class="section-label">How it works</div>
-        <h2 class="section-title">What happens after<br>you book a call.</h2>
-      </div>
-      <div class="process-table" data-aos="fade-up">
-        <div class="process-row">
-          <div class="process-step">Discovery call<span class="process-note">20 min · free</span></div>
-          <div class="process-desc">We learn your business, your market, and who your ideal client is. No pitch, no obligation.</div>
+          <h3 class="system-card__title">Custom Website</h3>
+          <p class="system-card__desc">Built to convert. Never a template. Designed around your market and your offer.</p>
         </div>
-        <div class="process-row">
-          <div class="process-step">System design<span class="process-note">3–5 days</span></div>
-          <div class="process-desc">We map out exactly what we'll build, why, and what results to expect for your specific market.</div>
+        <div class="system-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="system-card__icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#3CB371" stroke-width="1.6"/><path d="M4 24c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="#3CB371" stroke-width="1.6" stroke-linecap="round"/><circle cx="22" cy="8" r="3" fill="#3CB371" opacity=".3" stroke="#3CB371" stroke-width="1.2"/><path d="M20.5 8h3M22 6.5v3" stroke="#3CB371" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="system-card__title">AI Outreach Agent</h3>
+          <p class="system-card__desc">Finds your ideal prospects, writes a personalized message for each one, and sends them automatically.</p>
         </div>
-        <div class="process-row">
-          <div class="process-step">Build &amp; launch<span class="process-note">2–4 weeks</span></div>
-          <div class="process-desc">Website, AI agent, email sequences, integrations. We handle everything. You review and approve.</div>
+        <div class="system-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="system-card__icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="6" width="22" height="16" rx="2" stroke="#3CB371" stroke-width="1.6"/><path d="M3 10l11 7 11-7" stroke="#3CB371" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="system-card__title">Email Automation</h3>
+          <p class="system-card__desc">Follows up 2–4× per prospect. Routes warm replies directly to you. Books calls on your calendar.</p>
         </div>
-        <div class="process-row">
-          <div class="process-step">Monthly management<span class="process-note">ongoing</span></div>
-          <div class="process-desc">Every month we optimize messaging, refresh prospect lists, and send you a plain-English performance report.</div>
+        <div class="system-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="system-card__icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 20l6-6 4 4 6-8 4 4" stroke="#3CB371" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="2" width="24" height="24" rx="2" stroke="#3CB371" stroke-width="1.4" opacity=".3"/></svg>
+          </div>
+          <h3 class="system-card__title">Monthly Management</h3>
+          <p class="system-card__desc">We optimize, report, and repeat every month. Refresh prospect lists. Sharpen messaging. You focus on closing.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="niches section">
+  <!-- ═══════════ HOW IT WORKS ═══════════ -->
+  <section class="pv-section pv-section--alt" id="how-it-works">
     <div class="container">
-      <div class="section-header section-header--left" data-aos="fade-up">
-        <div class="section-label">Who we work with</div>
-        <h2 class="section-title">Professional firms<br>where one client matters.</h2>
+      <div class="pv-section__header">
+        <span class="eyebrow">The Process</span>
+        <h2 class="pv-section__h2">Up and running<br>in under a month.</h2>
       </div>
-      <div class="niches-list">
-        <a href="who-we-serve.html#commercial-real-estate" class="niche-row" data-aos="fade-up" data-aos-delay="50">
-          <div class="niche-row-left"><span class="niche-row-name">Commercial Real Estate</span><span class="niche-row-desc">Brokers, investors, and property managers</span></div>
-          <span class="niche-row-arrow">→</span>
-        </a>
-        <a href="who-we-serve.html#law-firms" class="niche-row" data-aos="fade-up" data-aos-delay="100">
-          <div class="niche-row-left"><span class="niche-row-name">Law Firms</span><span class="niche-row-desc">Solo practitioners and multi-attorney practices</span></div>
-          <span class="niche-row-arrow">→</span>
-        </a>
-        <a href="who-we-serve.html#med-spas" class="niche-row" data-aos="fade-up" data-aos-delay="150">
-          <div class="niche-row-left"><span class="niche-row-name">Med Spas &amp; Clinics</span><span class="niche-row-desc">Aesthetic and wellness practices</span></div>
-          <span class="niche-row-arrow">→</span>
-        </a>
-        <a href="who-we-serve.html#dental" class="niche-row" data-aos="fade-up" data-aos-delay="200">
-          <div class="niche-row-left"><span class="niche-row-name">Dental Practices</span><span class="niche-row-desc">General dentistry, orthodontics, and specialists</span></div>
-          <span class="niche-row-arrow">→</span>
-        </a>
-        <a href="who-we-serve.html#real-estate" class="niche-row" data-aos="fade-up" data-aos-delay="250">
-          <div class="niche-row-left"><span class="niche-row-name">Real Estate</span><span class="niche-row-desc">Residential agents and teams</span></div>
-          <span class="niche-row-arrow">→</span>
-        </a>
-        <a href="who-we-serve.html#cpa" class="niche-row" data-aos="fade-up" data-aos-delay="300">
-          <div class="niche-row-left"><span class="niche-row-name">CPA &amp; Financial Advisory</span><span class="niche-row-desc">Accounting firms and financial advisors</span></div>
-          <span class="niche-row-arrow">→</span>
-        </a>
+      <div class="steps-row">
+        <div class="step-item" data-aos="fade-up" data-aos-delay="0">
+          <span class="step-num">01</span>
+          <h3 class="step-title">Discovery</h3>
+          <p class="step-desc">20-min call. We learn your business, your market, and who your best client is.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="step-num">02</span>
+          <h3 class="step-title">System Design</h3>
+          <p class="step-desc">We map out exactly what to build and what results to expect for your specific market.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step-item" data-aos="fade-up" data-aos-delay="200">
+          <span class="step-num">03</span>
+          <h3 class="step-title">Build &amp; Launch</h3>
+          <p class="step-desc">2–4 weeks. Website, agent, email sequences, integrations. We handle everything.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true"></div>
+        <div class="step-item" data-aos="fade-up" data-aos-delay="300">
+          <span class="step-num">04</span>
+          <h3 class="step-title">Ongoing</h3>
+          <p class="step-desc">Monthly optimization and reporting. Your pipeline grows while you focus on closing deals.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CASE STUDIES, commented out until real client results are available -->
-  <!--
-  <section class="case-studies section">
+  <!-- ═══════════ WHO WE SERVE ═══════════ -->
+  <section class="pv-section">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">Results</div>
-        <h2 class="section-title">What Clients Have Achieved</h2>
+      <div class="pv-section__header">
+        <span class="eyebrow">Who We Serve</span>
+        <h2 class="pv-section__h2">Built for businesses where<br>one client changes everything.</h2>
       </div>
-      <div class="case-studies-grid">
-        <div class="case-study-card">
-          <div class="cs-industry">[TODO: industry]</div>
-          <h3>[TODO: real result from client, e.g. "47 qualified leads in 60 days"]</h3>
-          <p>[TODO: brief description, get written permission before publishing]</p>
-          <div class="cs-attribution">[TODO: firm name and city, get written permission]</div>
-        </div>
-        <div class="case-study-card">
-          <div class="cs-industry">[TODO: industry]</div>
-          <h3>[TODO: real result from client]</h3>
-          <p>[TODO: brief description]</p>
-          <div class="cs-attribution">[TODO: firm name and city]</div>
-        </div>
-        <div class="case-study-card">
-          <div class="cs-industry">[TODO: industry]</div>
-          <h3>[TODO: real result from client]</h3>
-          <p>[TODO: brief description]</p>
-          <div class="cs-attribution">[TODO: firm name and city]</div>
-        </div>
+      <div class="industries-grid">
+        <a href="who-we-serve.html" class="industry-tag">Commercial Real Estate</a>
+        <a href="who-we-serve.html" class="industry-tag">Law Firms</a>
+        <a href="who-we-serve.html" class="industry-tag">Med Spas &amp; Clinics</a>
+        <a href="who-we-serve.html" class="industry-tag">Dental Practices</a>
+        <a href="who-we-serve.html" class="industry-tag">Real Estate</a>
+        <a href="who-we-serve.html" class="industry-tag">CPA &amp; Financial Advisory</a>
       </div>
+      <p class="industries-sub">If you work in a high-ticket market, we can build a system for you. <a href="contact.html" class="pv-link">Let's talk →</a></p>
     </div>
   </section>
-  -->
 
-  <!-- TEAM, commented out until real team info is ready -->
-  <!--
-  <section class="team section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">The Team</div>
-        <h2 class="section-title">The People Behind the Systems</h2>
-      </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-photo">[TODO: real photo]</div>
-          <h3>[TODO: real name]</h3>
-          <div class="team-title">[TODO: title]</div>
-          <p>[TODO: short bio, 2 sentences max]</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">[TODO: real photo]</div>
-          <h3>[TODO: real name]</h3>
-          <div class="team-title">[TODO: title]</div>
-          <p>[TODO: short bio]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
-  <section class="cta-section section">
-    <div class="container">
-      <div class="cta-box" data-aos="fade-up" style="text-align:left;max-width:680px;margin:0;">
-        <div class="section-label">Get Started</div>
-        <h2 style="text-align:left;">See what this looks like<br>for your business.</h2>
-        <p style="text-align:left;margin:0 0 32px;max-width:480px;">Book a free 20-minute call. We'll walk through your market, map out exactly what we'd build, and give you a real number. No obligation.</p>
-        <!-- TODO: update Calendly link when account is confirmed -->
-        <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald">Book a Free Strategy Call</a>
-      </div>
+  <!-- ═══════════ CTA ═══════════ -->
+  <section class="cta-band">
+    <div class="cta-band__glow" aria-hidden="true"></div>
+    <div class="container cta-band__inner">
+      <h2 class="cta-band__h2">One new client pays for<br>the entire system.</h2>
+      <p class="cta-band__sub">Book a free 20-minute call. No pitch, just a real conversation about your business.</p>
+      <!-- TODO: update Calendly link when account is confirmed -->
+      <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald btn-large">Book a Free Call</a>
+      <p class="cta-band__note">On the call we'll map out exactly what we'd build for your market.</p>
     </div>
   </section>
 
