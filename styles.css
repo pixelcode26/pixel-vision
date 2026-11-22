@@ -1574,3 +1574,148 @@ body {
 }
 
 /* ── 5. MAGNETIC CTA — no extra CSS needed, handled in JS ── */
+
+/* ════════════════════════════════════════════════════
+   ENGINEER OVERRIDES: remove AI-template look
+   ════════════════════════════════════════════════════ */
+
+/* 1. Kill glass morphism */
+.service-card, .niche-card, .price-card, .step-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: #0d0d0d !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+.service-card:hover, .niche-card:hover, .price-card:hover {
+  border-color: rgba(60,179,113,0.3) !important;
+  box-shadow: none !important;
+  background: #111 !important;
+}
+.service-card, .niche-card, .price-card {
+  transition: border-color 0.2s, background 0.2s !important;
+}
+
+/* 2. Kill gradient text */
+.gradient-text {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: #F5BD02 !important;
+}
+
+/* 3. Hero: dot grid, no orbs */
+.hero { background: #000 !important; }
+.hero-bg .glow-1, .hero-bg .glow-2, .hero-bg .glow-3,
+.hero-gradient-orb, .hero-noise, .hero-canvas { display: none !important; }
+.grid-overlay {
+  background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  opacity: 1 !important;
+}
+
+/* 4. Badge: plain monospace label */
+.hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #666 !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+.badge-dot { display: none !important; }
+
+/* 5. Stat dividers replaced by borders */
+.stat-divider { display: none !important; }
+.stat-item { border-right: 1px solid rgba(255,255,255,0.08); padding: 0 32px; }
+.stat-item:last-child { border-right: none; }
+
+/* 6. Section top borders */
+.stats-bar, .about, .services-preview, .how-it-works, .niches, .cta-section {
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+/* 7. CTA box: clean */
+.cta-box {
+  background: #0d0d0d !important;
+  border: 1px solid rgba(60,179,113,0.2) !important;
+  box-shadow: none !important;
+}
+.cta-glow { display: none !important; }
+
+/* 8. Step connectors */
+.step-connector { background: rgba(255,255,255,0.08) !important; box-shadow: none !important; }
+
+/* 9. Flow chips */
+.flow-chip {
+  background: #0d0d0d !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  box-shadow: none !important;
+}
+.flow-chip.active {
+  border-color: rgba(60,179,113,0.5) !important;
+  color: #3CB371 !important;
+  box-shadow: none !important;
+  background: rgba(60,179,113,0.04) !important;
+}
+
+/* 10. Section labels */
+.section-label {
+  font-size: 0.7rem !important;
+  color: #3CB371 !important;
+  letter-spacing: 0.12em !important;
+  opacity: 1 !important;
+  font-weight: 400 !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* 11. Headline weight */
+.hero-headline { font-weight: 700 !important; }
+.section-title { font-weight: 700 !important; }
+
+/* 12. No float animation on icons */
+.niche-icon { animation: none !important; }
+
+/* 13. Step num: flat */
+.step-num, .step-card.aos-animate .step-num {
+  color: rgba(255,255,255,0.12) !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+/* 14. Scroll progress thinner */
+#pv-progress { height: 2px !important; }
+
+/* 15. No body accent bar */
+body::before { display: none !important; }
+
+/* 16. Nav: no blur until scrolled */
+.nav { backdrop-filter: none !important; background: rgba(0,0,0,0.85) !important; }
+.nav.scrolled { backdrop-filter: blur(16px) !important; }
+
+/* 17. Hero split layout */
+.hero { min-height: 100vh; display: flex; align-items: center; }
+.hero-diagram { display: none; }
+@media (min-width: 1024px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero-content { max-width: none !important; }
+  .hero-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+  }
+}

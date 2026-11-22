@@ -266,3 +266,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     requestAnimationFrame(loop);
   })();
 })();
+
+// ── REMOVE GIMMICK EFFECTS ───────────────────────
+// Hide cursor trail
+const pvCursor = document.getElementById('pv-cursor');
+if (pvCursor) pvCursor.style.display = 'none';
+
+// Remove transform effects from cards (clone replaces event listeners)
+document.querySelectorAll('.service-card, .niche-card, .price-card').forEach(card => {
+  const clone = card.cloneNode(true);
+  card.parentNode.replaceChild(clone, card);
+});
