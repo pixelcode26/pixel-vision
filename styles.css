@@ -1881,3 +1881,245 @@ body::before { display: none !important; }
   color: #3CB371;
   transform: translateX(4px);
 }
+
+/* ═══════════════════════════════════════════════════════════
+   CREATIVE REBUILD v2 — kills black boxes, real visual design
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Global section reset ── */
+.section { padding: 80px 0 !important; }
+@media (max-width: 768px) { .section { padding: 56px 0 !important; } }
+
+/* ── Section header: left-align everywhere ── */
+.section-header--left {
+  text-align: left !important;
+  margin: 0 0 48px 0 !important;
+  max-width: none !important;
+}
+.section-header--left .section-title::after { left: 0 !important; transform: none !important; }
+
+/* ── Kill ALL card backgrounds / borders on new sections ── */
+.system-parts-wrapper .service-link,
+.system-parts-wrapper { background: none !important; border: none !important; box-shadow: none !important; padding: 0 !important; }
+
+/* ── Service card: used as bare wrapper only now ── */
+.service-card {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+.service-card::before, .service-card::after { display: none !important; }
+.services-grid { display: block !important; }
+
+/* ── Hero terminal ── */
+.hero-terminal {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Space Mono', 'Fira Code', monospace;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  max-width: 480px;
+}
+@media (max-width: 1023px) { .hero-terminal { display: none; } }
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #111;
+}
+.t-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+.t-dot--red    { background: #ff5f57; }
+.t-dot--yellow { background: #ffbd2e; }
+.t-dot--green  { background: #28c840; }
+.t-label {
+  margin-left: 8px;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+}
+
+.terminal-body { padding: 16px 18px; }
+.t-line { display: flex; align-items: baseline; gap: 6px; min-height: 1.4em; }
+.t-gap  { height: 8px; }
+.t-indent { padding-left: 16px; }
+.t-cursor-line { margin-top: 2px; }
+
+.t-prompt { color: #3CB371; flex-shrink: 0; }
+.t-cmd    { color: rgba(255,255,255,0.75); }
+.t-muted  { color: rgba(255,255,255,0.3); }
+.t-green  { color: #3CB371; flex-shrink: 0; }
+.t-white  { color: rgba(255,255,255,0.75); }
+.t-quote  { color: #F5BD02; opacity: 0.75; }
+.t-cursor {
+  color: #3CB371;
+  animation: blink-cursor 1.1s step-end infinite;
+}
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Hero layout: show terminal on desktop ── */
+@media (min-width: 1024px) {
+  .hero .container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 64px !important;
+    align-items: center !important;
+  }
+  .hero-terminal { display: block; }
+}
+
+/* ── About section: tighter ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+/* ── System parts wrapper ── */
+.system-parts-wrapper {
+  max-width: 760px;
+}
+
+/* ── Process table: wider on desktop ── */
+.process-table { max-width: none !important; }
+
+/* ── CTA box: clean ── */
+.cta-box {
+  background: none !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 4px !important;
+  padding: 56px 64px !important;
+}
+@media (max-width: 768px) { .cta-box { padding: 40px 24px !important; } }
+.cta-glow { display: none !important; }
+
+/* ── Service link ── */
+.service-link {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: #3CB371;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(60,179,113,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.service-link:hover { border-color: #3CB371; }
+
+/* ── Stats bar override (hide old one if still present) ── */
+.stats-bar { display: none !important; }
+
+/* ── Section title: left-align variant ── */
+.section-header--left .section-title {
+  text-align: left !important;
+}
+.section-header--left .section-sub {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+/* ── Niche list padding ── */
+.niches .container { max-width: 760px; margin-left: 0; }
+@media (min-width: 1200px) { .niches .container { max-width: 900px; } }
+
+/* ── Hero content: left-align everything ── */
+.hero-content { text-align: left !important; max-width: none !important; }
+.hero-actions { justify-content: flex-start !important; }
+
+/* ── No underline decorator on section title in left sections ── */
+.section-header--left .section-title::after { display: none !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   SPACING + ALIGNMENT POLISH
+   ═══════════════════════════════════════════════════════════ */
+
+/* Tighter section padding — sections flow together */
+.section { padding: 64px 0 !important; }
+@media (max-width: 768px) { .section { padding: 48px 0 !important; } }
+
+/* Facts bar: less space */
+.facts-bar { padding: 14px 0 !important; }
+
+/* Hero: tighter bottom */
+.hero { min-height: auto !important; padding: 100px 0 80px !important; }
+@media (max-width: 768px) { .hero { padding: 80px 0 60px !important; } }
+
+/* CTA: left-align like every other section */
+.cta-section .container { text-align: left !important; }
+.cta-box { text-align: left !important; max-width: 760px !important; margin: 0 !important; }
+.cta-box h2 { text-align: left !important; }
+.cta-box p  { text-align: left !important; }
+.cta-box .btn { margin-left: 0 !important; }
+
+/* About section: no extra top gap */
+.about { padding-top: 64px !important; }
+
+/* Remove decorative line under about headline */
+.section-title::after { display: none !important; }
+
+/* Section label: no pill/badge styling — just plain monospace */
+.section-label {
+  font-family: 'Space Mono', monospace !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.1em !important;
+  color: rgba(255,255,255,0.3) !important;
+  text-transform: uppercase !important;
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 16px !important;
+  display: block !important;
+}
+.section-label::before { display: none !important; }
+
+/* Section title: tighter margin */
+.section-title { margin-bottom: 32px !important; font-size: clamp(1.9rem, 3.5vw, 2.6rem) !important; }
+
+/* Niches section: left-aligned, constrained width */
+.niches .container { max-width: 100% !important; }
+.niches-list { max-width: 700px; }
+
+/* Process table: max width  */
+.process-table { max-width: 800px !important; }
+
+/* System parts: max width */
+.system-parts-wrapper { max-width: 700px !important; }
+
+/* CTA section gap */
+.cta-section { padding: 64px 0 !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   FINAL POLISH — gap + CTA fixes
+   ═══════════════════════════════════════════════════════════ */
+
+/* Section header gap: 72px → 36px */
+.section-header { margin-bottom: 36px !important; max-width: none !important; }
+.section-header--left { margin-bottom: 36px !important; max-width: none !important; text-align: left !important; }
+
+/* CTA box: fully left-aligned, kill auto margins on children */
+.cta-section { text-align: left !important; }
+.cta-box {
+  text-align: left !important;
+  max-width: 700px !important;
+  margin: 0 !important;
+  padding: 56px 56px !important;
+  border-radius: 2px !important;
+}
+.cta-box h2  { text-align: left !important; font-size: clamp(1.9rem, 3vw, 2.6rem) !important; }
+.cta-box p   { text-align: left !important; margin: 0 0 32px 0 !important; max-width: 520px !important; }
+.cta-box .btn { align-self: flex-start !important; }
+
+@media (max-width: 768px) { .cta-box { padding: 36px 24px !important; } }

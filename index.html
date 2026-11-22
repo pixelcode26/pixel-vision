@@ -92,42 +92,32 @@
           <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald">Book a Free Call</a>
         </div>
       </div>
-      <div class="hero-diagram" aria-hidden="true">
-        <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;">
-          <rect x="20" y="20" width="360" height="60" rx="6" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="#0d0d0d"/>
-          <circle cx="38" cy="50" r="5" fill="rgba(255,255,255,0.12)"/>
-          <circle cx="54" cy="50" r="5" fill="rgba(255,255,255,0.12)"/>
-          <circle cx="70" cy="50" r="5" fill="rgba(255,255,255,0.12)"/>
-          <rect x="88" y="44" width="140" height="12" rx="2" fill="rgba(255,255,255,0.05)"/>
-          <rect x="88" y="44" width="80" height="12" rx="2" fill="rgba(60,179,113,0.15)"/>
-          <text x="96" y="55" fill="#3CB371" font-family="monospace" font-size="9">pixelvision.system</text>
-          <rect x="20" y="110" width="80" height="40" rx="4" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="#0d0d0d"/>
-          <text x="60" y="126" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="8" text-anchor="middle">PROSPECT</text>
-          <text x="60" y="140" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="7" text-anchor="middle">IDENTIFIED</text>
-          <line x1="100" y1="130" x2="140" y2="130" stroke="rgba(60,179,113,0.4)" stroke-width="1"/>
-          <polygon points="140,127 148,130 140,133" fill="rgba(60,179,113,0.4)"/>
-          <rect x="150" y="110" width="80" height="40" rx="4" stroke="rgba(60,179,113,0.3)" stroke-width="1" fill="rgba(60,179,113,0.05)"/>
-          <text x="190" y="126" fill="#3CB371" font-family="monospace" font-size="8" text-anchor="middle">OUTREACH</text>
-          <text x="190" y="140" fill="rgba(60,179,113,0.6)" font-family="monospace" font-size="7" text-anchor="middle">AUTOMATED</text>
-          <line x1="230" y1="130" x2="270" y2="130" stroke="rgba(60,179,113,0.4)" stroke-width="1"/>
-          <polygon points="270,127 278,130 270,133" fill="rgba(60,179,113,0.4)"/>
-          <rect x="280" y="110" width="100" height="40" rx="4" stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="#0d0d0d"/>
-          <text x="330" y="126" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="8" text-anchor="middle">CALL</text>
-          <text x="330" y="140" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="7" text-anchor="middle">BOOKED</text>
-          <rect x="20" y="180" width="360" height="1" fill="rgba(255,255,255,0.04)"/>
-          <text x="20" y="205" fill="rgba(255,255,255,0.2)" font-family="monospace" font-size="8">STATUS</text>
-          <text x="90" y="205" fill="rgba(255,255,255,0.2)" font-family="monospace" font-size="8">PROSPECTS</text>
-          <text x="200" y="205" fill="rgba(255,255,255,0.2)" font-family="monospace" font-size="8">OUTREACH</text>
-          <text x="300" y="205" fill="rgba(255,255,255,0.2)" font-family="monospace" font-size="8">PIPELINE</text>
-          <text x="20" y="225" fill="#3CB371" font-family="monospace" font-size="9">ACTIVE</text>
-          <text x="90" y="225" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="9">342</text>
-          <text x="200" y="225" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="9">24/7</text>
-          <text x="300" y="225" fill="#F5BD02" font-family="monospace" font-size="9">GROWING</text>
-          <rect x="20" y="250" width="360" height="1" fill="rgba(255,255,255,0.04)"/>
-          <text x="20" y="270" fill="rgba(255,255,255,0.15)" font-family="monospace" font-size="7">&#8594; AI agent initialized for target market</text>
-          <text x="20" y="285" fill="rgba(255,255,255,0.15)" font-family="monospace" font-size="7">&#8594; Outreach sequences loaded</text>
-          <text x="20" y="300" fill="rgba(60,179,113,0.5)" font-family="monospace" font-size="7">&#8594; System running_</text>
-        </svg>
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="t-dot t-dot--red"></span>
+          <span class="t-dot t-dot--yellow"></span>
+          <span class="t-dot t-dot--green"></span>
+          <span class="t-label">pv-agent · outreach</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">pv scan --market "commercial-real-estate" --geo "miami, fl"</span></div>
+          <div class="t-line t-gap"></div>
+          <div class="t-line"><span class="t-muted">Scanning public records, LinkedIn, property filings...</span></div>
+          <div class="t-line"><span class="t-muted">Applying ICP filters: active listings, deal size, recency</span></div>
+          <div class="t-line t-gap"></div>
+          <div class="t-line"><span class="t-green">✓</span> <span class="t-white">1,204 prospects scanned</span></div>
+          <div class="t-line"><span class="t-green">✓</span> <span class="t-white">89 high-priority matches identified</span></div>
+          <div class="t-line t-gap"></div>
+          <div class="t-line"><span class="t-muted">Drafting personalized outreach...</span></div>
+          <div class="t-line t-indent"><span class="t-quote">"Hi Marcus, noticed your Q3 industrial portfolio—"</span></div>
+          <div class="t-line t-indent"><span class="t-quote">"Hi Sarah, your Brickell mixed-use project caught—"</span></div>
+          <div class="t-line t-gap"></div>
+          <div class="t-line"><span class="t-green">→</span> <span class="t-white">12 emails sent today</span></div>
+          <div class="t-line"><span class="t-green">→</span> <span class="t-white">3 replies · 1 call booked</span></div>
+          <div class="t-line"><span class="t-green">→</span> <span class="t-white">CRM updated automatically</span></div>
+          <div class="t-line t-gap"></div>
+          <div class="t-line t-cursor-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -156,12 +146,11 @@
 
   <section class="services-preview section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header section-header--left" data-aos="fade-up">
         <div class="section-label">The system</div>
         <h2 class="section-title">Four parts.<br>One pipeline.</h2>
       </div>
-      <div class="services-grid" style="grid-template-columns: 1fr;">
-        <div class="service-card" data-aos="fade-up" data-aos-delay="100" style="max-width: 760px; margin: 0 auto; width: 100%;">
+      <div class="system-parts-wrapper" data-aos="fade-up">
           <div class="system-parts">
             <div class="system-part"><span class="part-num">01</span><div><strong>Premium Website</strong><p>Custom-built, never a template. Designed to convert the traffic your outreach generates.</p></div></div>
             <div class="system-part"><span class="part-num">02</span><div><strong>AI Outreach Agent</strong><p>Identifies your ideal prospects, writes personalized messages for each one, and sends them automatically.</p></div></div>
@@ -169,14 +158,13 @@
             <div class="system-part"><span class="part-num">04</span><div><strong>Monthly Management</strong><p>We review performance, refresh prospect lists, and optimize messaging every single month.</p></div></div>
           </div>
           <a href="services.html" class="service-link">See the full system →</a>
-        </div>
       </div>
     </div>
   </section>
 
   <section class="how-it-works section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header section-header--left" data-aos="fade-up">
         <div class="section-label">How it works</div>
         <h2 class="section-title">What happens after<br>you book a call.</h2>
       </div>
@@ -203,7 +191,7 @@
 
   <section class="niches section">
     <div class="container">
-      <div class="section-header" data-aos="fade-up">
+      <div class="section-header section-header--left" data-aos="fade-up">
         <div class="section-label">Who we work with</div>
         <h2 class="section-title">Professional firms<br>where one client matters.</h2>
       </div>
@@ -296,22 +284,12 @@
 
   <section class="cta-section section">
     <div class="container">
-      <div class="cta-box" data-aos="fade-up">
-        <div class="cta-glow"></div>
+      <div class="cta-box" data-aos="fade-up" style="text-align:left;max-width:680px;margin:0;">
         <div class="section-label">Get Started</div>
-        <!-- CTA HEADLINE OPTIONS, uncomment the one you want -->
-        <!-- Option 1 (active): -->
-        <h2>See what this looks like<br>for your business.</h2>
-        <!-- Option 2:
-        <h2>Get a Custom AI Client<br/>Acquisition Plan for Free.</h2>
-        -->
-        <!-- Option 3:
-        <h2>See Exactly What AI Can<br/>Do for Your Business.</h2>
-        -->
-        <p>Book a free 20-minute call. We'll walk through your market, map out exactly what we'd build, and give you a real number. No obligation.</p>
+        <h2 style="text-align:left;">See what this looks like<br>for your business.</h2>
+        <p style="text-align:left;margin:0 0 32px;max-width:480px;">Book a free 20-minute call. We'll walk through your market, map out exactly what we'd build, and give you a real number. No obligation.</p>
         <!-- TODO: update Calendly link when account is confirmed -->
-        <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald btn-large">Book a Free Strategy Call</a>
-        <p style="margin-top:16px;font-size:0.88rem;color:#777;">On the call, we'll map out a custom AI acquisition plan for your specific business and tell you exactly what to expect.</p>
+        <a href="https://calendly.com/pixelvision2026" target="_blank" rel="noopener" class="btn btn-primary btn-emerald">Book a Free Strategy Call</a>
       </div>
     </div>
   </section>
