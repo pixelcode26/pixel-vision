@@ -14,7 +14,7 @@
     // ── WHAT IS PIXEL VISION ──
     {
       keys: ['what is pixel vision', 'who are you', 'about you', 'about pixel vision', 'tell me about', 'what do you do', 'what does pixel vision do'],
-      answer: "Pixel Vision is a full-service AI agency based in Washington, DC. We build complete AI-powered client acquisition systems, premium websites, automated outreach agents, email automation, and ongoing monthly optimization, custom-built for professional service firms.",
+      answer: "Pixel Vision is a full-service AI agency. We build complete AI-powered client acquisition systems, premium websites, automated outreach agents, email automation, and ongoing monthly optimization, custom-built for professional service firms.",
       qr: ['What do you build?', 'Who do you work with?', 'How much does it cost?']
     },
 
@@ -189,7 +189,7 @@
     // ── LOCATION ──
     {
       keys: ['location', 'where', 'based', 'dc', 'washington', 'virginia', 'maryland', 'dmv', 'nationwide', 'remote', 'in person'],
-      answer: "Pixel Vision is based in Washington, DC. We serve clients nationwide, the entire engagement is conducted remotely (strategy calls, reviews, and approvals are all done virtually). We have deep roots in the DC, Maryland, and Virginia market but have worked with clients in New York, Texas, California, and beyond.",
+      answer: "Pixel Vision serves clients nationwide. Every engagement is fully remote, strategy calls, reviews, and approvals all done virtually, so it makes no difference where you are located. We have worked with clients across the US, from New York and DC to Texas and California.",
       qr: ['Book a Free Call', 'How does the process work?']
     },
 
