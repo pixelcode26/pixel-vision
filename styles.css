@@ -714,7 +714,10 @@ p  { color: var(--gray-400); line-height: 1.8; }
   .hero           { padding: 120px 0 72px; }
   .stat-item      { padding: 16px 28px; }
   .step-connector { display: none; }
-  .cta-box        { padding: 60px 28px; }
+  .cta-box        { padding: 60px 24px; text-align: left; }
+  .cta-box h2     { text-align: center; }
+  .cta-box p      { text-align: left; margin-left: 0; margin-right: 0; max-width: 100%; }
+  .cta-box .btn   { display: block; width: 100%; text-align: center; box-sizing: border-box; }
   .hero-actions   { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 }
