@@ -87,6 +87,9 @@
           AI-Powered Client Acquisition for <span class="gradient-text">America's Most Ambitious Firms.</span>
         </h1>
         -->
+        <p class="hero-rotating animate-fade-up delay-2">
+          Built for <span class="rotating-word" id="hero-rotating-word">Law Firms</span><span class="rotating-cursor">|</span>
+        </p>
         <p class="hero-sub animate-fade-up delay-3">
           Premium AI-powered websites and client acquisition systems, custom-built for your market.
         </p>
@@ -408,5 +411,26 @@
 
   <script src="main.js"></script>
   <script src="chatbot.js"></script>
+  <script>
+  (function() {
+    const words = ['Law Firms', 'Med Spas', 'Real Estate', 'Dental Practices', 'CPA Firms', 'Commercial RE'];
+    const el = document.getElementById('hero-rotating-word');
+    if (!el) return;
+    let wordIdx = 0, charIdx = 0, deleting = false;
+    function tick() {
+      const target = words[wordIdx];
+      if (!deleting) {
+        el.textContent = target.slice(0, ++charIdx);
+        if (charIdx === target.length) { deleting = true; return setTimeout(tick, 1800); }
+        setTimeout(tick, 80);
+      } else {
+        el.textContent = target.slice(0, --charIdx);
+        if (charIdx === 0) { deleting = false; wordIdx = (wordIdx + 1) % words.length; return setTimeout(tick, 300); }
+        setTimeout(tick, 45);
+      }
+    }
+    setTimeout(tick, 1000);
+  })();
+  </script>
 </body>
 </html>
