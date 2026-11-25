@@ -1,0 +1,16 @@
+name: fetch-video
+on:
+  push:
+    branches: [fetch-video]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    if: "!contains(github.event.head_commit.message, 'video file')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          curl -sf -o comm.mp4 "https://d8j0ntlcm91z4.cloudfront.net/user_3F43ZzSvlbKfBvgAVATL9VYSwda/hf_20261125_230637_5554df36-3009-4f1e-b9cc-3294dc5fa5cf.mp4"
+          git config user.name bot && git config user.email bot@users.noreply.github.com
+          git add comm.mp4 && git commit -m "video file" && git push
