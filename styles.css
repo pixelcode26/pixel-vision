@@ -349,7 +349,7 @@ p  { color: var(--gray-400); line-height: 1.8; }
   padding: 56px 0;
 }
 .stats-grid { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; }
-.stat-item  { text-align: center; padding: 20px 56px; flex: 1; min-width: 160px; }
+.stat-item  { text-align: center; padding: 20px 40px; flex: 1; min-width: 160px; }
 .stat-divider { width: 1px; height: 52px; background: var(--border); flex-shrink: 0; }
 .stat-number {
   display: block;
@@ -1398,8 +1398,8 @@ body {
 .stat-number {
   font-family: var(--font-mono) !important;
   font-weight: 700 !important;
-  font-size: clamp(2rem, 3.2vw, 2.6rem) !important;
-  letter-spacing: -0.03em !important;
+  font-size: clamp(1.1rem, 3.8vw, 2.8rem) !important;
+  letter-spacing: -0.02em !important;
   color: var(--gold) !important;
 }
 
@@ -1427,8 +1427,7 @@ body {
 
 /* Fix stat number letter-spacing — Space Mono distorts at negative tracking */
 .stat-number {
-  letter-spacing: 0.01em;
-  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  letter-spacing: 0.02em;
 }
 
 /* Services grid single-card fix — no side chrome */
@@ -1455,6 +1454,7 @@ body {
   -webkit-text-fill-color: unset !important;
   color: var(--gold) !important;
   display: inline !important;
+  font-style: italic !important;
 }
 
 /* Fix mobile text overflow — letter-spacing -0.04em is too tight at small sizes */
